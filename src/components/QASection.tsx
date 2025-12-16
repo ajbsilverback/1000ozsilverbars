@@ -48,10 +48,10 @@ export default function QASection({
       )}
       <section className="py-16 section-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center text-gray-900">
             Questions & <span className="silver-text">Answers</span>
           </h2>
-          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
             Common questions about {SITE_CONFIG.primaryProduct} answered by our editorial team.
           </p>
           <div className="space-y-6">
@@ -63,7 +63,7 @@ export default function QASection({
                 itemType="https://schema.org/Question"
               >
                 <h3 
-                  className="text-lg font-semibold text-white mb-3"
+                  className="text-lg font-semibold text-gray-900 mb-3"
                   itemProp="name"
                 >
                   {item.question}
@@ -74,7 +74,7 @@ export default function QASection({
                   itemProp="acceptedAnswer"
                 >
                   <p 
-                    className="text-gray-400 leading-relaxed"
+                    className="text-gray-600 leading-relaxed"
                     itemProp="text"
                   >
                     {item.answer}

@@ -202,13 +202,13 @@ export default async function ResourcePage({ params }: Props) {
 
       {/* Article Header */}
       <section className="pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10 silver-bar-pattern relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-bullion-darker via-transparent to-bullion-darker" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80" />
         <Container className="relative">
           {/* Breadcrumb row */}
           <div className="flex flex-wrap items-center gap-4 mb-4">
             <Link
               href="/resources"
-              className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+              className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
             >
               <svg
                 className="w-4 h-4 mr-2"
@@ -225,11 +225,11 @@ export default async function ResourcePage({ params }: Props) {
               </svg>
               Back to Resources
             </Link>
-            <span className="px-3 py-1 rounded-full bg-silver-600/20 text-silver-400 text-sm font-medium">
+            <span className="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-sm font-medium">
               {resource.category}
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 leading-tight">
             {resource.title}
           </h1>
 
@@ -239,10 +239,10 @@ export default async function ResourcePage({ params }: Props) {
       </section>
 
       {/* Key Takeaways */}
-      <section className="py-4 md:py-6 border-b border-silver-600/10">
+      <section className="py-4 md:py-6 border-b border-silver-200 bg-white">
         <Container>
-          <div className="card p-5 md:p-6 bg-silver-600/5 border-silver-600/30">
-            <h2 className="text-lg md:text-xl font-display font-semibold text-silver-400 mb-3 flex items-center">
+          <div className="card p-5 md:p-6 bg-navy-50 border-navy-100">
+            <h2 className="text-lg md:text-xl font-display font-semibold text-navy-700 mb-3 flex items-center">
               <svg
                 className="w-5 h-5 mr-2 flex-shrink-0"
                 fill="none"
@@ -260,8 +260,8 @@ export default async function ResourcePage({ params }: Props) {
             </h2>
             <ul className="space-y-2">
               {content.keyTakeaways.map((takeaway, index) => (
-                <li key={index} className="flex items-start text-gray-300 text-sm md:text-base">
-                  <span className="text-silver-400 mr-2 mt-0.5">•</span>
+                <li key={index} className="flex items-start text-gray-700 text-sm md:text-base">
+                  <span className="text-navy-600 mr-2 mt-0.5">•</span>
                   <span>{replacePriceTokens(takeaway, formattedBarPrice)}</span>
                 </li>
               ))}
@@ -271,31 +271,31 @@ export default async function ResourcePage({ params }: Props) {
       </section>
 
       {/* Article Content */}
-      <article className="py-8 md:py-10">
+      <article className="py-8 md:py-10 bg-white">
         <Container>
-          <div className="prose prose-lg prose-invert max-w-none space-y-8">
+          <div className="prose prose-lg max-w-none space-y-8">
             {content.sections.map((section, index) => (
               <div key={index} className="space-y-4">
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-white">
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-gray-900">
                   {section.heading}
                 </h2>
                 {section.content.map((paragraph, pIndex) => (
                   <p
                     key={pIndex}
-                    className="text-gray-300 leading-relaxed text-base md:text-lg"
+                    className="text-gray-600 leading-relaxed text-base md:text-lg"
                   >
                     {replacePriceTokens(paragraph, formattedBarPrice)}
                   </p>
                 ))}
                 {section.subheading && (
                   <div className="space-y-3 pt-4">
-                    <h3 className="text-lg md:text-xl font-display font-semibold text-silver-400">
+                    <h3 className="text-lg md:text-xl font-display font-semibold text-navy-700">
                       {section.subheading}
                     </h3>
                     {section.subcontent?.map((paragraph, sIndex) => (
                       <p
                         key={sIndex}
-                        className="text-gray-300 leading-relaxed text-base md:text-lg"
+                        className="text-gray-600 leading-relaxed text-base md:text-lg"
                       >
                         {replacePriceTokens(paragraph, formattedBarPrice)}
                       </p>
@@ -307,14 +307,14 @@ export default async function ResourcePage({ params }: Props) {
           </div>
 
           {/* Internal Links */}
-          <div className="mt-10 p-5 md:p-6 rounded-xl bg-bullion-darker/50 border border-silver-600/10">
-            <p className="text-gray-400 mb-3 text-sm md:text-base">
+          <div className="mt-10 p-5 md:p-6 rounded-xl bg-gray-50 border border-silver-200">
+            <p className="text-gray-600 mb-3 text-sm md:text-base">
               Continue learning about 1000 oz silver bars:
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Link
                 href="/live-silver-prices"
-                className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+                className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
                 <span>View current silver prices</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,7 +323,7 @@ export default async function ResourcePage({ params }: Props) {
               </Link>
               <Link
                 href="/where-to-buy-1000-oz-silver-bars"
-                className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+                className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
                 <span>Where to buy 1000 oz silver bars</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -332,7 +332,7 @@ export default async function ResourcePage({ params }: Props) {
               </Link>
               <Link
                 href="/resources"
-                className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+                className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
                 <span>Browse all resources</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -343,15 +343,15 @@ export default async function ResourcePage({ params }: Props) {
           </div>
 
           {/* Monex Link - Contextual external citation */}
-          <div className="mt-5 p-5 md:p-6 rounded-xl bg-silver-600/5 border border-silver-600/20">
-            <p className="text-gray-400 mb-2 text-sm md:text-base">
+          <div className="mt-5 p-5 md:p-6 rounded-xl bg-navy-50 border border-navy-100">
+            <p className="text-gray-600 mb-2 text-sm md:text-base">
               For more detailed information and current pricing:
             </p>
             <a
               href={resource.monexLink}
               target="_blank"
               rel="nofollow noopener"
-              className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors font-medium"
+              className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors font-medium"
             >
               <span>{getMonexAnchorText(slug)}</span>
               <svg
@@ -379,16 +379,16 @@ export default async function ResourcePage({ params }: Props) {
       <section className="py-12 md:py-16 section-dark">
         <Container>
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-gray-900">
               Continue Your <span className="silver-text">Education</span>
             </h2>
-            <p className="text-gray-400 mb-6 max-w-xl mx-auto text-sm md:text-base">
+            <p className="text-gray-600 mb-6 max-w-xl mx-auto text-sm md:text-base">
               Explore more{" "}
-              <Link href="/resources" className="text-silver-400 hover:underline">
+              <Link href="/resources" className="text-navy-700 hover:underline">
                 resources about 1000 oz silver bars
               </Link>{" "}
               or check{" "}
-              <Link href="/live-silver-prices" className="text-silver-400 hover:underline">
+              <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                 current market prices
               </Link>{" "}
               to inform your investment decisions.
@@ -406,9 +406,9 @@ export default async function ResourcePage({ params }: Props) {
       </section>
 
       {/* Related Resources */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-white">
         <Container size="wide">
-          <h2 className="text-xl md:text-2xl font-display font-semibold text-white mb-6">
+          <h2 className="text-xl md:text-2xl font-display font-semibold text-gray-900 mb-6">
             Related Resources
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
@@ -419,15 +419,15 @@ export default async function ResourcePage({ params }: Props) {
                 <Link
                   key={relatedResource.slug}
                   href={`/resources/${relatedResource.slug}`}
-                  className="card p-5 group hover:border-navy-600/40 transition-all"
+                  className="card p-5 group hover:border-navy-300 transition-all"
                 >
-                  <span className="text-xs text-silver-400 font-medium">
+                  <span className="text-xs text-navy-600 font-medium">
                     {relatedResource.category}
                   </span>
-                  <h3 className="text-base md:text-lg font-display font-semibold text-white mt-2 mb-2 group-hover:text-silver-400 transition-colors line-clamp-2">
+                  <h3 className="text-base md:text-lg font-display font-semibold text-gray-900 mt-2 mb-2 group-hover:text-navy-700 transition-colors line-clamp-2">
                     {relatedResource.title}
                   </h3>
-                  <p className="text-gray-400 text-sm line-clamp-2">
+                  <p className="text-gray-600 text-sm line-clamp-2">
                     {relatedResource.excerpt}
                   </p>
                 </Link>

@@ -22,13 +22,13 @@ export function SilverPriceChart() {
       />
       <div className="mt-4 text-center">
         <em>
-          <small className="text-gray-400">
+          <small className="text-gray-500">
             Prices provided by{" "}
             <a
               href="https://www.monex.com/liveprices/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-silver-400 hover:underline"
+              className="text-navy-600 hover:text-navy-700 hover:underline"
             >
               Monex
             </a>
@@ -59,13 +59,13 @@ export function SilverPriceTable() {
       />
       <div className="mt-4 text-center">
         <em>
-          <small className="text-gray-400">
+          <small className="text-gray-500">
             Prices provided by{" "}
             <a
               href="https://www.monex.com/liveprices/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-silver-400 hover:underline"
+              className="text-navy-600 hover:text-navy-700 hover:underline"
             >
               Monex
             </a>

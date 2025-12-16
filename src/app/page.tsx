@@ -57,30 +57,30 @@ export default async function HomePage() {
 
       {/* Hero Section */}
       <section className="relative silver-bar-pattern overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-bullion-darker via-transparent to-bullion-darker" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             {/* Left: Text Content */}
             <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-navy-700/10 border border-navy-600/30 mb-6">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-navy-50 border border-navy-100 mb-6">
                 <span className="w-2 h-2 rounded-full bg-navy-700 mr-3 animate-pulse" />
-                <span className="text-silver-400 text-sm font-medium">
+                <span className="text-navy-700 text-sm font-medium">
                   1000 Troy Ounces of Pure Silver
                 </span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4">
                 <span className="silver-text">1000 oz Silver Bars</span>
                 <br />
-                <span className="text-white">
+                <span className="text-gray-900">
                   Maximum Value. Lowest Premiums.
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-prose">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-prose">
                 Discover why 1000 oz silver bars are the preferred choice for 
                 serious investors and institutions seeking the lowest premiums 
                 per ounce and substantial silver positions. Learn{" "}
-                <Link href="/where-to-buy-1000-oz-silver-bars" className="text-silver-400 hover:underline">
+                <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
                   where to buy 1000 oz silver bars
                 </Link>{" "}
                 in our independent buying guide.
@@ -127,10 +127,10 @@ export default async function HomePage() {
       <section className="pt-4 pb-10 section-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-3">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-3 text-gray-900">
               <span className="silver-text">Live Silver Pricing</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Track real-time 1000 oz silver bar prices with live market data updated on page load.
             </p>
           </div>
@@ -139,13 +139,13 @@ export default async function HomePage() {
       </section>
 
       {/* Why 1000 oz Silver Bars Section */}
-      <section className="py-16 md:py-20 section-dark">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-gray-900">
               Why <span className="silver-text">1000 oz Silver Bars</span>?
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               The 1000 oz silver bar represents the optimal balance of 
               premium efficiency and practical ownership for serious investors.
             </p>
@@ -153,9 +153,9 @@ export default async function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="card group">
-              <div className="w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-xl silver-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-8 h-8 text-black"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -168,10 +168,10 @@ export default async function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-display font-semibold mb-4 text-white">
+              <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
                 Lowest Premiums
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 1000 oz bars command the lowest retail premiums of any commonly 
                 traded bar size, typically just 0.5-2% over spot price. Compared 
                 to 1 oz bars or rounds (5-15% premium), you get significantly more silver 
@@ -180,9 +180,9 @@ export default async function HomePage() {
             </div>
 
             <div className="card group">
-              <div className="w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-xl silver-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-8 h-8 text-black"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -195,10 +195,10 @@ export default async function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-display font-semibold mb-4 text-white">
+              <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
                 COMEX Standard
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 The 1000 oz bar is the standard for COMEX silver futures 
                 delivery and institutional trading globally. Bars from 
                 LBMA-accredited refiners meet strict purity and weight 
@@ -207,9 +207,9 @@ export default async function HomePage() {
             </div>
 
             <div className="card group">
-              <div className="w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-xl silver-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-8 h-8 text-black"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -222,10 +222,10 @@ export default async function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-display font-semibold mb-4 text-white">
+              <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
                 Storage Efficiency
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 A single 1000 oz bar stores the equivalent value of 1000 individual 
                 1 oz bars in one compact unit. This dramatically simplifies 
                 storage, reduces handling, and often lowers vault fees at 
@@ -237,28 +237,28 @@ export default async function HomePage() {
       </section>
 
       {/* Who Buys 1000 oz Silver Bars */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-16 md:py-20 relative overflow-hidden bg-gray-50">
         <div className="absolute inset-0 silver-bar-pattern opacity-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-gray-900">
                 Who Buys <span className="silver-text">1000 oz Silver Bars</span>?
               </h2>
-              <p className="text-lg md:text-xl text-gray-300 mb-6">
+              <p className="text-lg md:text-xl text-gray-600 mb-6">
                 1000 oz bars serve investors with substantial capital seeking 
                 maximum efficiency in their silver holdings.
               </p>
               <div className="space-y-5">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-navy-700/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-silver-400 font-bold">01</span>
+                  <div className="w-12 h-12 rounded-lg bg-navy-50 border border-navy-100 flex items-center justify-center flex-shrink-0">
+                    <span className="text-navy-700 font-bold">01</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       High-Net-Worth Individuals
                     </h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-600">
                       Investors with $50,000+ allocated to precious metals 
                       maximize their buying power with 1000 oz bars, saving 
                       thousands in premiums compared to smaller denominations.
@@ -266,14 +266,14 @@ export default async function HomePage() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-navy-700/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-silver-400 font-bold">02</span>
+                  <div className="w-12 h-12 rounded-lg bg-navy-50 border border-navy-100 flex items-center justify-center flex-shrink-0">
+                    <span className="text-navy-700 font-bold">02</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       Institutions & Funds
                     </h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-600">
                       Commodity funds, ETFs, and institutional investors trade 
                       in 1000 oz bars as the standard unit. These bars settle 
                       COMEX futures contracts and form the backbone of the 
@@ -282,14 +282,14 @@ export default async function HomePage() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-navy-700/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-silver-400 font-bold">03</span>
+                  <div className="w-12 h-12 rounded-lg bg-navy-50 border border-navy-100 flex items-center justify-center flex-shrink-0">
+                    <span className="text-navy-700 font-bold">03</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       Long-Term Holders
                     </h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-600">
                       Investors with 10+ year time horizons prioritize acquisition 
                       cost over flexibility. The lower premiums on 1000 oz bars 
                       compound into significant value over decades.
@@ -306,23 +306,23 @@ export default async function HomePage() {
       </section>
 
       {/* Size Comparison */}
-      <section className="py-16 md:py-20 section-dark">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-gray-900">
               Comparing <span className="silver-text">Bar Sizes</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Understanding how 1000 oz silver bars compare to smaller denominations 
               helps you choose the right size for your investment goals.
             </p>
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full bg-white rounded-xl shadow-sm border border-silver-200">
               <thead>
-                <tr className="border-b border-navy-600/30">
-                  <th className="text-left py-4 px-6 text-silver-400 font-display">
+                <tr className="border-b border-silver-200 bg-gray-50">
+                  <th className="text-left py-4 px-6 text-navy-700 font-display">
                     Feature
                   </th>
                   <th className="text-center py-4 px-6 text-gray-500 font-display">
@@ -331,21 +331,21 @@ export default async function HomePage() {
                   <th className="text-center py-4 px-6 text-gray-500 font-display">
                     100 oz Bar
                   </th>
-                  <th className="text-center py-4 px-6 text-silver-400 font-display">
+                  <th className="text-center py-4 px-6 text-navy-700 font-display">
                     1000 oz Bar
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-gray-300">
-                <tr className="border-b border-gray-800">
+              <tbody className="text-gray-700">
+                <tr className="border-b border-silver-100">
                   <td className="py-4 px-6 font-medium">Premium Over Spot</td>
                   <td className="py-4 px-6 text-center">5-15%</td>
                   <td className="py-4 px-6 text-center">2-5%</td>
-                  <td className="py-4 px-6 text-center text-green-400">
+                  <td className="py-4 px-6 text-center text-emerald-600 font-semibold">
                     0.5-2% (Lowest)
                   </td>
                 </tr>
-                <tr className="border-b border-gray-800">
+                <tr className="border-b border-silver-100">
                   <td className="py-4 px-6 font-medium">Entry Cost</td>
                   <td className="py-4 px-6 text-center">
                     {priceData ? (
@@ -369,29 +369,29 @@ export default async function HomePage() {
                     )}
                   </td>
                 </tr>
-                <tr className="border-b border-gray-800">
+                <tr className="border-b border-silver-100">
                   <td className="py-4 px-6 font-medium">Divisibility</td>
                   <td className="py-4 px-6 text-center">★★★★★</td>
                   <td className="py-4 px-6 text-center">★★★☆☆</td>
                   <td className="py-4 px-6 text-center">★☆☆☆☆</td>
                 </tr>
-                <tr className="border-b border-gray-800">
+                <tr className="border-b border-silver-100">
                   <td className="py-4 px-6 font-medium">Storage Efficiency</td>
                   <td className="py-4 px-6 text-center">Good</td>
                   <td className="py-4 px-6 text-center">Better</td>
-                  <td className="py-4 px-6 text-center text-green-400">Best</td>
+                  <td className="py-4 px-6 text-center text-emerald-600 font-semibold">Best</td>
                 </tr>
-                <tr className="border-b border-gray-800">
+                <tr className="border-b border-silver-100">
                   <td className="py-4 px-6 font-medium">Institutional Acceptance</td>
                   <td className="py-4 px-6 text-center">★★★☆☆</td>
                   <td className="py-4 px-6 text-center">★★★★☆</td>
-                  <td className="py-4 px-6 text-center text-green-400">★★★★★</td>
+                  <td className="py-4 px-6 text-center text-emerald-600">★★★★★</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 font-medium">Best For</td>
                   <td className="py-4 px-6 text-center">Flexibility</td>
                   <td className="py-4 px-6 text-center">Balance</td>
-                  <td className="py-4 px-6 text-center text-silver-400">
+                  <td className="py-4 px-6 text-center text-navy-700 font-semibold">
                     Maximum Value
                   </td>
                 </tr>
@@ -402,13 +402,13 @@ export default async function HomePage() {
       </section>
 
       {/* Considerations Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-gray-900">
               Important <span className="silver-text">Considerations</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               While 1000 oz bars offer the best premiums, they require careful 
               planning around liquidity, storage, and capital commitment.
             </p>
@@ -416,68 +416,68 @@ export default async function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="card p-6">
-              <h3 className="text-xl font-display font-semibold text-white mb-4">
+              <h3 className="text-xl font-display font-semibold text-gray-900 mb-4">
                 Liquidity Trade-offs
               </h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-600 mb-4">
                 1000 oz bars are less liquid than smaller denominations. While 
                 established dealers maintain ready markets, the buyer pool 
                 is smaller than for 1 oz or 100 oz bars. Selling may take longer and 
                 require connecting with specialized dealers.
               </p>
               <p className="text-gray-500 text-sm">
-                <strong className="text-silver-400">Consider:</strong> If you 
+                <strong className="text-navy-700">Consider:</strong> If you 
                 anticipate needing to liquidate portions of your holdings, 
                 smaller bars may be more practical despite higher premiums.
               </p>
             </div>
 
             <div className="card p-6">
-              <h3 className="text-xl font-display font-semibold text-white mb-4">
+              <h3 className="text-xl font-display font-semibold text-gray-900 mb-4">
                 All-or-Nothing Sales
               </h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-600 mb-4">
                 Unlike holding multiple small bars, you cannot partially 
                 liquidate a 1000 oz bar. When you sell, you&apos;re converting 
                 approximately {priceData ? `$${Math.round(priceData.ask).toLocaleString("en-US")}` : "$30,000"}+ to cash at once. This may exceed 
                 your actual needs or create tax timing challenges.
               </p>
               <p className="text-gray-500 text-sm">
-                <strong className="text-silver-400">Consider:</strong> Some 
+                <strong className="text-navy-700">Consider:</strong> Some 
                 investors combine 1000 oz bars for core holdings with smaller 
                 bars for flexibility.
               </p>
             </div>
 
             <div className="card p-6">
-              <h3 className="text-xl font-display font-semibold text-white mb-4">
+              <h3 className="text-xl font-display font-semibold text-gray-900 mb-4">
                 Storage Requirements
               </h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-600 mb-4">
                 A 1000 oz bar weighs approximately 68-70 pounds and requires secure storage 
                 capable of protecting substantial value. Professional vault 
                 storage, while adding costs, often makes sense for holdings 
                 of this magnitude.
               </p>
               <p className="text-gray-500 text-sm">
-                <strong className="text-silver-400">Consider:</strong> Vault 
+                <strong className="text-navy-700">Consider:</strong> Vault 
                 storage fees are often based on value, meaning 1000 oz bars 
                 may have similar storage costs to equivalent smaller holdings.
               </p>
             </div>
 
             <div className="card p-6">
-              <h3 className="text-xl font-display font-semibold text-white mb-4">
+              <h3 className="text-xl font-display font-semibold text-gray-900 mb-4">
                 Authentication Importance
               </h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-600 mb-4">
                 Given the high value, buy only from established dealers 
                 and choose bars from LBMA-accredited refiners with full 
                 documentation. Counterfeit risk increases with bar value, 
                 making provenance critical.
               </p>
               <p className="text-gray-500 text-sm">
-                <strong className="text-silver-400">Consider:</strong> COMEX 
+                <strong className="text-navy-700">Consider:</strong> COMEX 
                 good delivery bars from refiners like Johnson Matthey, 
                 Asahi, and KGHM include documentation that aids authentication.
               </p>
@@ -490,19 +490,19 @@ export default async function HomePage() {
       <QASection items={homeQA} priceData={priceData} />
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 gold-gradient opacity-5" />
+      <section className="py-16 md:py-20 relative overflow-hidden bg-white">
+        <div className="absolute inset-0 silver-bar-pattern opacity-30" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 text-gray-900">
             Ready to Learn More?
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Explore{" "}
-            <Link href="/live-silver-prices" className="text-silver-400 hover:underline">
+            <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
               current silver prices
             </Link>
             , dive into our{" "}
-            <Link href="/resources" className="text-silver-400 hover:underline">
+            <Link href="/resources" className="text-navy-700 hover:underline">
               educational library
             </Link>
             , and discover whether 1000 oz silver bars are right for your 

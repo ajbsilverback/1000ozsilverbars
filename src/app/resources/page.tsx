@@ -121,30 +121,30 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 silver-bar-pattern relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-bullion-darker via-transparent to-bullion-darker" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
               <span className="silver-text">Educational</span>
               <br />
-              <span className="text-white">Resources</span>
+              <span className="text-gray-900">Resources</span>
             </h1>
 
-            <p className="text-xl text-gray-300 leading-relaxed mt-6">
+            <p className="text-xl text-gray-600 leading-relaxed mt-6">
               Deepen your understanding of 1000 oz silver bars and the broader 
               silver market with our comprehensive guides. Whether you&apos;re 
               evaluating 1000 oz bars vs. smaller denominations, comparing refiner 
               brands, or planning storage, our resources provide the insights 
               you need. Check{" "}
-              <Link href="/live-silver-prices" className="text-silver-400 hover:underline">
+              <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                 current silver prices
               </Link>
               , explore our{" "}
-              <Link href="/where-to-buy-1000-oz-silver-bars" className="text-silver-400 hover:underline">
+              <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
                 independent buying guide
               </Link>
               , or return to our{" "}
-              <Link href="/" className="text-silver-400 hover:underline">
+              <Link href="/" className="text-navy-700 hover:underline">
                 1000 oz silver bar overview
               </Link>.
             </p>
@@ -153,7 +153,7 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
       </section>
 
       {/* Category Pills */}
-      <section className="py-8 border-b border-silver-600/10">
+      <section className="py-8 border-b border-silver-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3">
             {/* All Topics Button */}
@@ -161,8 +161,8 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
               href="/resources"
               className={`px-4 py-2 rounded-full font-medium text-sm transition-colors ${
                 activeCategory === "all"
-                  ? "bg-silver-600 text-black"
-                  : "bg-silver-600/10 text-silver-400 border border-silver-600/30 hover:bg-silver-600/20"
+                  ? "bg-navy-700 text-white"
+                  : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
               }`}
             >
               All Topics
@@ -179,8 +179,8 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
                   href={`/resources?category=${encodeURIComponent(categorySlug)}`}
                   className={`px-4 py-2 rounded-full font-medium text-sm transition-colors ${
                     isActive
-                      ? "bg-silver-600 text-black"
-                      : "bg-silver-600/10 text-silver-400 border border-silver-600/30 hover:bg-silver-600/20"
+                      ? "bg-navy-700 text-white"
+                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
                   }`}
                 >
                   {category}
@@ -196,9 +196,9 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Show count when filtered */}
           {activeCategory !== "all" && (
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-gray-600 text-sm mb-6">
               Showing {filteredResources.length} article{filteredResources.length !== 1 ? "s" : ""} in{" "}
-              <span className="text-silver-400 capitalize">{activeCategory}</span>
+              <span className="text-navy-700 capitalize">{activeCategory}</span>
             </p>
           )}
 
@@ -207,23 +207,23 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
               <Link
                 key={resource.slug}
                 href={`/resources/${resource.slug}`}
-                className="card p-5 md:p-6 group hover:border-navy-600/40 transition-all duration-300 flex flex-col"
+                className="card p-5 md:p-6 group hover:border-navy-300 transition-all duration-300 flex flex-col"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-silver-600/20 flex items-center justify-center text-silver-400 flex-shrink-0">
+                  <div className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-navy-50 flex items-center justify-center text-navy-600 flex-shrink-0">
                     {getCategoryIcon(resource.category)}
                   </div>
-                  <span className="text-sm text-silver-400 font-medium">
+                  <span className="text-sm text-navy-600 font-medium">
                     {resource.category}
                   </span>
                 </div>
-                <h2 className="text-lg md:text-xl font-display font-semibold text-white mb-2 group-hover:text-navy-400 transition-colors line-clamp-2">
+                <h2 className="text-lg md:text-xl font-display font-semibold text-gray-900 mb-2 group-hover:text-navy-700 transition-colors line-clamp-2">
                   {resource.title}
                 </h2>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow line-clamp-3">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow line-clamp-3">
                   {resource.excerpt}
                 </p>
-                <div className="flex items-center text-silver-400 text-sm font-medium mt-auto">
+                <div className="flex items-center text-navy-700 text-sm font-medium mt-auto">
                   <span>Read Guide</span>
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
@@ -246,12 +246,12 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
           {/* Empty state */}
           {filteredResources.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-500 mb-4">
                 No articles found in this category.
               </p>
               <Link
                 href="/resources"
-                className="text-silver-400 hover:underline"
+                className="text-navy-700 hover:underline"
               >
                 View all topics
               </Link>
@@ -264,14 +264,14 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
       <QASection items={resourcesQA} priceData={priceData} />
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-gray-900">
             Ready to Check <span className="silver-text">Silver Prices</span>?
           </h2>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-600 mb-6">
             View live{" "}
-            <Link href="/live-silver-prices" className="text-silver-400 hover:underline">
+            <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
               silver pricing and market data
             </Link>{" "}
             to inform your investment decisions.

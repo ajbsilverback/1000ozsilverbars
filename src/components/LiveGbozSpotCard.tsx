@@ -17,8 +17,8 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
   // Error state - if data === null
   if (data === null) {
     return (
-      <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111]">
-        <p className="text-gray-400 text-center text-lg">
+      <div className="max-w-3xl mx-auto rounded-xl border border-silver-200 shadow-lg p-6 sm:p-10 bg-white">
+        <p className="text-gray-500 text-center text-lg">
           Live pricing is temporarily unavailable.
         </p>
       </div>
@@ -29,29 +29,29 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
   const isNeutral = data.change === 0;
 
   return (
-    <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111] space-y-6">
+    <div className="max-w-3xl mx-auto rounded-xl border border-silver-200 shadow-lg p-6 sm:p-10 bg-white space-y-6">
       {/* Header with live indicator */}
       <div className="flex items-center justify-between">
-        <h2 className="text-xl sm:text-2xl font-display font-semibold text-white">
+        <h2 className="text-xl sm:text-2xl font-display font-semibold text-gray-900">
           Live 1000 oz Silver Bar Price
         </h2>
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-sm text-gray-400 font-medium">Live</span>
+          <span className="text-sm text-gray-500 font-medium">Live</span>
         </div>
       </div>
 
       {/* Main Price Display with navy accent */}
       <div className="relative text-center py-6">
         {/* Subtle navy gradient streak behind price */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-700/10 via-navy-600/20 to-navy-700/10 rounded-lg" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-50 via-navy-100 to-navy-50 rounded-lg" />
         
         <div className="relative">
-          <p className="text-lg text-gray-400 mb-2">Current Ask Price</p>
-          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight silver-text">
+          <p className="text-lg text-gray-500 mb-2">Current Ask Price</p>
+          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-navy-700">
             {formatUSD(data.ask)}
           </p>
-          <p className="text-lg text-gray-400 mt-2">per 1000 oz bar</p>
+          <p className="text-lg text-gray-500 mt-2">per 1000 oz bar</p>
         </div>
       </div>
 
@@ -59,14 +59,14 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       <div className="flex justify-center">
         <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg ${
           isNeutral
-            ? "bg-neutral-500/10 border border-neutral-500/20"
+            ? "bg-gray-100 border border-gray-200"
             : isPositive 
-              ? "bg-emerald-500/10 border border-emerald-500/20" 
-              : "bg-red-500/10 border border-red-500/20"
+              ? "bg-emerald-50 border border-emerald-200" 
+              : "bg-red-50 border border-red-200"
         }`}>
           {!isNeutral && (
             <svg 
-              className={`w-5 h-5 ${isPositive ? "text-emerald-400" : "text-red-400 rotate-180"}`} 
+              className={`w-5 h-5 ${isPositive ? "text-emerald-600" : "text-red-600 rotate-180"}`} 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -81,10 +81,10 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
           )}
           <span className={`text-lg font-semibold ${
             isNeutral 
-              ? "text-neutral-300" 
+              ? "text-gray-600" 
               : isPositive 
-                ? "text-emerald-400" 
-                : "text-red-400"
+                ? "text-emerald-700" 
+                : "text-red-700"
           }`}>
             {formatChange(data.change, data.changePercent)}
           </span>
@@ -93,13 +93,13 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
 
       {/* Bid/Ask row */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="text-center p-4 rounded-lg bg-white/5">
+        <div className="text-center p-4 rounded-lg bg-gray-50 border border-gray-100">
           <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">Bid</p>
-          <p className="text-xl font-semibold text-gray-200">{formatUSD(data.bid)}</p>
+          <p className="text-xl font-semibold text-gray-700">{formatUSD(data.bid)}</p>
         </div>
-        <div className="text-center p-4 rounded-lg bg-navy-700/20 border border-navy-600/30">
-          <p className="text-sm text-navy-400 uppercase tracking-wide mb-1">Ask</p>
-          <p className="text-xl font-semibold text-silver-300">{formatUSD(data.ask)}</p>
+        <div className="text-center p-4 rounded-lg bg-navy-50 border border-navy-100">
+          <p className="text-sm text-navy-600 uppercase tracking-wide mb-1">Ask</p>
+          <p className="text-xl font-semibold text-navy-700">{formatUSD(data.ask)}</p>
         </div>
       </div>
 
@@ -107,27 +107,27 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       <div className="space-y-3">
         <p className="text-sm text-gray-500 uppercase tracking-wide text-center">Market Stats</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Open</p>
-            <p className="text-sm md:text-base font-semibold text-neutral-100">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Open</p>
+            <p className="text-sm md:text-base font-semibold text-gray-700">
               {data.open > 0 ? formatUSD(data.open) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">High</p>
-            <p className="text-sm md:text-base font-semibold text-emerald-400">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">High</p>
+            <p className="text-sm md:text-base font-semibold text-emerald-600">
               {data.high > 0 ? formatUSD(data.high) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Low</p>
-            <p className="text-sm md:text-base font-semibold text-red-400">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Low</p>
+            <p className="text-sm md:text-base font-semibold text-red-600">
               {data.low > 0 ? formatUSD(data.low) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Prev Close</p>
-            <p className="text-sm md:text-base font-semibold text-neutral-100">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Prev Close</p>
+            <p className="text-sm md:text-base font-semibold text-gray-700">
               {data.previousClose > 0 ? formatUSD(data.previousClose) : "—"}
             </p>
           </div>
@@ -144,7 +144,7 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
         <div className="text-center pt-2">
           <Link 
             href="/live-silver-prices" 
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-700/20 border border-navy-600/40 text-silver-300 font-medium hover:bg-navy-700/30 hover:border-navy-500 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-50 border border-navy-200 text-navy-700 font-medium hover:bg-navy-100 hover:border-navy-300 transition-colors"
           >
             <span>View Full Pricing &amp; Charts</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,13 +155,13 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       )}
 
       {/* Attribution */}
-      <p className="text-xs text-gray-600 text-center pt-4 border-t border-silver-600/20">
+      <p className="text-xs text-gray-400 text-center pt-4 border-t border-silver-100">
         Prices provided by{" "}
         <a
           href="https://www.monex.com/liveprices/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-silver-400 hover:text-navy-400 hover:underline"
+          className="text-navy-600 hover:text-navy-700 hover:underline"
         >
           Monex
         </a>

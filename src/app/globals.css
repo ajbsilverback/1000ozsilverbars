@@ -11,18 +11,21 @@
   --navy-dark: #152a47;
   
   /* Silver/Steel - Secondary Accent (material context) */
-  --silver-primary: #a8b4c0;
-  --silver-light: #d1d9e0;
-  --silver-dark: #6b7a8a;
+  --silver-primary: #6b7a8a;
+  --silver-light: #a8b4c0;
+  --silver-dark: #4a5568;
   
-  /* Backgrounds (dark, institutional) */
-  --bg-dark: #0f0f0f;
-  --bg-darker: #080808;
-  --bg-card: #141414;
+  /* Light Mode Backgrounds (off-white, light gray, soft slate) */
+  --bg-light: #f8f9fa;
+  --bg-lighter: #ffffff;
+  --bg-card: #ffffff;
+  --bg-muted: #f1f3f5;
+  --bg-subtle: #e9ecef;
   
-  /* Text */
-  --text-primary: #f5f5f5;
-  --text-secondary: #9ca3af;
+  /* Text (dark on light) */
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
 }
 
 html {
@@ -31,7 +34,7 @@ html {
 
 body {
   font-family: "Source Sans 3", system-ui, sans-serif;
-  background: var(--bg-dark);
+  background: var(--bg-light);
   color: var(--text-primary);
 }
 
@@ -47,9 +50,9 @@ body {
     background: linear-gradient(135deg, var(--silver-dark) 0%, var(--silver-primary) 50%, var(--silver-light) 100%);
   }
 
-  /* Silver text gradient for headings */
+  /* Silver text gradient for headings - darker for light mode legibility */
   .silver-text {
-    background: linear-gradient(135deg, var(--silver-dark) 0%, var(--silver-primary) 40%, var(--silver-light) 100%);
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--silver-dark) 40%, var(--silver-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -57,58 +60,61 @@ body {
 
   /* Navy text for highlighted elements */
   .navy-text {
-    color: var(--navy-light);
+    color: var(--navy-primary);
   }
 
   /* Primary button - Navy accent */
   .btn-primary {
     @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-300 rounded-lg;
     background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 50%, var(--navy-light) 100%);
-    box-shadow: 0 4px 20px rgba(30, 58, 95, 0.4);
+    box-shadow: 0 4px 20px rgba(30, 58, 95, 0.3);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(30, 58, 95, 0.6);
+    box-shadow: 0 6px 30px rgba(30, 58, 95, 0.4);
     background: linear-gradient(135deg, var(--navy-primary) 0%, var(--navy-light) 100%);
   }
 
-  /* Secondary button - Silver border with navy hover */
+  /* Secondary button - Navy border */
   .btn-secondary {
     @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold transition-all duration-300 rounded-lg border-2;
-    border-color: var(--silver-dark);
-    color: var(--silver-primary);
+    border-color: var(--navy-primary);
+    color: var(--navy-primary);
+    background: transparent;
   }
 
   .btn-secondary:hover {
-    border-color: var(--navy-primary);
-    color: var(--navy-light);
-    background: rgba(30, 58, 95, 0.1);
+    border-color: var(--navy-light);
+    color: white;
+    background: var(--navy-primary);
     transform: translateY(-2px);
   }
 
-  /* Card component */
+  /* Card component - Light mode */
   .card {
     @apply p-8 rounded-2xl;
-    background: linear-gradient(145deg, rgba(25, 25, 28, 0.95) 0%, rgba(15, 15, 18, 0.98) 100%);
-    border: 1px solid rgba(168, 180, 192, 0.12);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background: var(--bg-card);
+    border: 1px solid rgba(107, 122, 138, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   }
 
   .card:hover {
-    border-color: rgba(30, 58, 95, 0.4);
+    border-color: rgba(30, 58, 95, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   }
 
-  /* Section backgrounds */
+  /* Section backgrounds - Light mode */
   .section-dark {
-    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    background: linear-gradient(180deg, var(--bg-muted) 0%, var(--bg-subtle) 100%);
   }
 
-  /* Silver bar pattern for hero backgrounds */
+  /* Silver bar pattern for hero backgrounds - Light mode */
   .silver-bar-pattern {
+    background-color: var(--bg-light);
     background-image: 
-      linear-gradient(90deg, rgba(168, 180, 192, 0.03) 1px, transparent 1px),
-      linear-gradient(rgba(168, 180, 192, 0.03) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(107, 122, 138, 0.06) 1px, transparent 1px),
+      linear-gradient(rgba(107, 122, 138, 0.06) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
@@ -118,39 +124,40 @@ body {
   }
 
   .gold-text {
-    background: linear-gradient(135deg, var(--silver-dark) 0%, var(--silver-primary) 40%, var(--silver-light) 100%);
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--silver-dark) 40%, var(--silver-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gold-bar-pattern {
+    background-color: var(--bg-light);
     background-image: 
-      linear-gradient(90deg, rgba(168, 180, 192, 0.03) 1px, transparent 1px),
-      linear-gradient(rgba(168, 180, 192, 0.03) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(107, 122, 138, 0.06) 1px, transparent 1px),
+      linear-gradient(rgba(107, 122, 138, 0.06) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 }
 
-/* Widget container styles */
+/* Widget container styles - Light mode */
 .widget-container {
   @apply rounded-xl overflow-hidden;
-  background: rgba(20, 20, 24, 0.9);
-  border: 1px solid rgba(168, 180, 192, 0.15);
+  background: var(--bg-card);
+  border: 1px solid rgba(107, 122, 138, 0.15);
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - Light mode */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-darker);
+  background: var(--bg-muted);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--silver-dark);
+  background: var(--silver-light);
   border-radius: 4px;
 }
 

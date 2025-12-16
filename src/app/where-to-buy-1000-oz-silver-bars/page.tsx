@@ -138,22 +138,22 @@ export default async function WhereToBuyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
 
-      <main className="py-16">
+      <main className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 space-y-16">
           {/* Hero Section */}
           <section className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
               <span className="silver-text">Where to Buy</span>
               <br />
-              <span className="text-white">1000 oz Silver Bars</span>
+              <span className="text-gray-900">1000 oz Silver Bars</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               An independent educational guide to understanding your options
               for purchasing 1000 oz (COMEX good delivery) silver bars from various sources.
             </p>
-            <div className="bg-bullion-silver/5 border border-bullion-silver/20 rounded-xl p-6 max-w-2xl mx-auto">
-              <p className="text-gray-400 text-sm">
-                <strong className="text-silver-400">Important:</strong>{" "}
+            <div className="bg-navy-50 border border-navy-100 rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-gray-600 text-sm">
+                <strong className="text-navy-700">Important:</strong>{" "}
                 {SITE_CONFIG.brandName} is an independent educational resource.
                 We do not sell precious metals and are not affiliated with any
                 of the dealers listed on this page. We encourage you to compare
@@ -166,83 +166,83 @@ export default async function WhereToBuyPage() {
 
           {/* How to Evaluate Dealers */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center text-gray-900">
               How to <span className="silver-text">Evaluate Dealers</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="card p-6">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-silver-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Reputation & Reviews
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 text-sm">
                   Research dealer history, customer reviews, and industry
                   accreditations. Look for established businesses with
                   transparent track records and LBMA/COMEX-accredited products.
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-silver-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Pricing & Spreads
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 text-sm">
                   Compare premiums over spot price across multiple dealers.
                   1000 oz bars typically have 0.5-2% premiums, significantly lower
                   than smaller denominations.
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-silver-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                   Shipping & Insurance
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 text-sm">
                   Understand shipping costs, delivery times, and insurance
                   coverage. For 1000 oz bars worth {formattedPrice}+, fully insured
                   shipping and freight handling is essential.
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-silver-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
                   Buyback Policies
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 text-sm">
                   Check whether the dealer offers buyback programs and at what
                   spread. 1000 oz bars from recognized refiners typically have
                   excellent buyback liquidity in institutional markets.
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-silver-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                   Storage & Security
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 text-sm">
                   Many dealers offer storage options for 1000 oz bars. Understand
                   whether storage is allocated (your specific bars) or
                   unallocated (pooled holdings).
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-silver-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Customer Support
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-600 text-sm">
                   For purchases of this magnitude, responsive customer service
                   is critical. Evaluate accessibility and helpfulness before
                   committing.
@@ -253,10 +253,10 @@ export default async function WhereToBuyPage() {
 
           {/* Online Bullion Dealers */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-900">
               <span className="silver-text">Online</span> Bullion Dealers
             </h2>
-            <p className="text-gray-400 text-center mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
               Major online dealers offer wide selection, competitive pricing,
               and convenient shipping. We encourage you to compare prices
               across multiple sources before purchasing.
@@ -267,17 +267,17 @@ export default async function WhereToBuyPage() {
                   key={dealer.name}
                   className="card p-6 flex flex-col"
                 >
-                  <h3 className="text-xl font-display font-semibold text-white mb-3">
+                  <h3 className="text-xl font-display font-semibold text-gray-900 mb-3">
                     {dealer.name}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-4 flex-grow">
+                  <p className="text-gray-600 text-sm mb-4 flex-grow">
                     {dealer.description}
                   </p>
                   <a
                     href={dealer.url}
                     target="_blank"
                     rel="nofollow"
-                    className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors text-sm font-medium"
+                    className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors text-sm font-medium"
                   >
                     <span>View {dealer.name} silver bars</span>
                     <svg
@@ -301,47 +301,47 @@ export default async function WhereToBuyPage() {
 
           {/* Local Coin Shops */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-900">
               <span className="silver-text">Local</span> Coin Shops & Dealers
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-700 mb-6">
                 Local coin shops and bullion dealers can sometimes handle 1000 oz bar
                 transactions, though inventory of these large bars is rare at retail locations:
               </p>
               <ul className="space-y-4 mb-6">
                 <li className="flex items-start gap-3">
-                  <span className="text-silver-400 mt-1">•</span>
-                  <span className="text-gray-400">
-                    <strong className="text-white">Face-to-face transactions:</strong>{" "}
+                  <span className="text-navy-600 mt-1">•</span>
+                  <span className="text-gray-600">
+                    <strong className="text-gray-900">Face-to-face transactions:</strong>{" "}
                     Build relationships and negotiate directly, especially valuable for large purchases.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-silver-400 mt-1">•</span>
-                  <span className="text-gray-400">
-                    <strong className="text-white">Special orders:</strong>{" "}
+                  <span className="text-navy-600 mt-1">•</span>
+                  <span className="text-gray-600">
+                    <strong className="text-gray-900">Special orders:</strong>{" "}
                     Many shops can order 1000 oz bars even if not in regular inventory.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-silver-400 mt-1">•</span>
-                  <span className="text-gray-400">
-                    <strong className="text-white">Physical inspection:</strong>{" "}
+                  <span className="text-navy-600 mt-1">•</span>
+                  <span className="text-gray-600">
+                    <strong className="text-gray-900">Physical inspection:</strong>{" "}
                     Examine bars before purchase and verify authenticity in person.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-silver-400 mt-1">•</span>
-                  <span className="text-gray-400">
-                    <strong className="text-white">Weight considerations:</strong>{" "}
+                  <span className="text-navy-600 mt-1">•</span>
+                  <span className="text-gray-600">
+                    <strong className="text-gray-900">Weight considerations:</strong>{" "}
                     At 68-70 lbs, handling and transport require planning.
                   </span>
                 </li>
               </ul>
-              <div className="bg-bullion-darker/50 rounded-lg p-4">
+              <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
                 <p className="text-gray-500 text-sm">
-                  <strong className="text-gray-400">Finding local dealers:</strong>{" "}
+                  <strong className="text-gray-700">Finding local dealers:</strong>{" "}
                   Search for &ldquo;coin shop near me&rdquo; or &ldquo;bullion dealer&rdquo;
                   in your area. For 1000 oz bars, call ahead to confirm availability
                   and pricing, as most shops don&apos;t stock these large bars.
@@ -352,21 +352,21 @@ export default async function WhereToBuyPage() {
 
           {/* Marketplaces & Auctions */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-900">
               <span className="silver-text">Marketplaces</span> & Auctions
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-700 mb-6">
                 Online marketplaces and auction houses occasionally offer
                 1000 oz silver bars, though due diligence is especially important
                 for purchases of this value.
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Potential Benefits
                   </h3>
-                  <ul className="space-y-2 text-gray-400 text-sm">
+                  <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Access to rare or vintage bars</li>
                     <li>• Competitive bidding may yield value</li>
                     <li>• Buyer protection programs available</li>
@@ -374,10 +374,10 @@ export default async function WhereToBuyPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     Key Risks to Consider
                   </h3>
-                  <ul className="space-y-2 text-gray-400 text-sm">
+                  <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Counterfeit risk from unknown sellers</li>
                     <li>• Seller verification requires diligence</li>
                     <li>• High-value transactions require caution</li>
@@ -390,7 +390,7 @@ export default async function WhereToBuyPage() {
                   href="https://www.ebay.com/sch/i.html?_nkw=1000+oz+silver+bar"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors text-sm"
+                  className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors text-sm"
                 >
                   <span>eBay 1000 oz silver bar search</span>
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -401,7 +401,7 @@ export default async function WhereToBuyPage() {
                   href="https://www.ha.com/"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors text-sm"
+                  className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors text-sm"
                 >
                   <span>Heritage Auctions</span>
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -414,28 +414,28 @@ export default async function WhereToBuyPage() {
 
           {/* Vaulted & Custodial Programs */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-900">
               <span className="silver-text">Vaulted</span> & Custodial Programs
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-700 mb-6">
                 For 1000 oz bars, many investors prefer professional vault storage
                 rather than taking physical delivery. Given the weight (68-70 lbs) and 
                 value, this approach provides institutional-grade security.
               </p>
-              <div className="bg-bullion-silver/5 border border-bullion-silver/20 rounded-lg p-4 mb-6">
-                <h3 className="text-lg font-semibold text-white mb-2">
+              <div className="bg-navy-50 border border-navy-100 rounded-lg p-4 mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   Allocated vs. Unallocated Storage
                 </h3>
-                <p className="text-gray-400 text-sm">
-                  <strong className="text-white">Allocated storage</strong> means
+                <p className="text-gray-600 text-sm">
+                  <strong className="text-gray-900">Allocated storage</strong> means
                   your specific 1000 oz bars are segregated and identified as yours.{" "}
-                  <strong className="text-white">Unallocated storage</strong> means
+                  <strong className="text-gray-900">Unallocated storage</strong> means
                   you have a claim on a quantity of silver held in aggregate. For
                   1000 oz bars, allocated storage is strongly recommended.
                 </p>
               </div>
-              <p className="text-gray-400 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-4">
                 Major vault and logistics providers serving the precious metals
                 industry include:
               </p>
@@ -444,7 +444,7 @@ export default async function WhereToBuyPage() {
                   href="https://www.brinks.com/"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors text-sm"
+                  className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors text-sm"
                 >
                   <span>Brink&apos;s</span>
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -455,7 +455,7 @@ export default async function WhereToBuyPage() {
                   href="https://www.loomis.com/"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors text-sm"
+                  className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors text-sm"
                 >
                   <span>Loomis</span>
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -468,20 +468,20 @@ export default async function WhereToBuyPage() {
 
           {/* Price & Data Sources */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-900">
               Using Multiple <span className="silver-text">Pricing Sources</span>
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-700 mb-6">
                 Our{" "}
-                <Link href="/live-silver-prices" className="text-silver-400 hover:underline">
+                <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                   live silver prices
                 </Link>{" "}
                 use data from Monex, but comparing prices across multiple
                 sources helps you understand market conditions and verify
                 dealer pricing.
               </p>
-              <h3 className="text-lg font-semibold text-white mb-3">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Additional pricing resources:
               </h3>
               <ul className="space-y-3">
@@ -490,7 +490,7 @@ export default async function WhereToBuyPage() {
                     href="https://www.monex.com/silver-prices/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+                    className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
                   >
                     <span>Monex silver spot prices</span>
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -504,7 +504,7 @@ export default async function WhereToBuyPage() {
                     href="https://www.kitco.com/silver-price-today-usa/"
                     target="_blank"
                     rel="nofollow"
-                    className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+                    className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
                   >
                     <span>Kitco silver price charts</span>
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -517,7 +517,7 @@ export default async function WhereToBuyPage() {
                     href="https://silverprice.org/"
                     target="_blank"
                     rel="nofollow"
-                    className="inline-flex items-center text-silver-400 hover:text-navy-400 transition-colors"
+                    className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
                   >
                     <span>SilverPrice.org market data</span>
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -530,9 +530,9 @@ export default async function WhereToBuyPage() {
           </section>
 
           {/* Disclaimer */}
-          <section className="border-t border-bullion-silver/10 pt-12">
+          <section className="border-t border-silver-200 pt-12">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-xl font-display font-semibold text-gray-400 mb-4">
+              <h2 className="text-xl font-display font-semibold text-gray-500 mb-4">
                 Disclaimer
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed">
@@ -551,7 +551,7 @@ export default async function WhereToBuyPage() {
 
           {/* Navigation Links */}
           <section className="text-center">
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-600 mb-6">
               Continue exploring {SITE_CONFIG.brandName}:
             </p>
             <div className="flex flex-wrap justify-center gap-4">

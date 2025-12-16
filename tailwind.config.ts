@@ -37,21 +37,27 @@ const config: Config = {
           900: "#1a202c",
           950: "#0d1117",
         },
-        // Bullion palette (institutional)
+        // Bullion palette (light mode - institutional)
         bullion: {
-          dark: "#141414",
-          darker: "#0a0a0a",
-          // Navy accents
+          // Light mode backgrounds
+          light: "#f8f9fa",
+          lighter: "#ffffff",
+          muted: "#f1f3f5",
+          subtle: "#e9ecef",
+          // Legacy dark (now maps to light)
+          dark: "#f8f9fa",
+          darker: "#f1f3f5",
+          // Navy accents (unchanged)
           navy: "#1e3a5f",
           navyLight: "#2d5a8a",
           navyDark: "#152a47",
           // Silver/steel accents
-          silver: "#a8b4c0",
-          silverLight: "#d1d9e0",
-          silverDark: "#6b7a8a",
+          silver: "#6b7a8a",
+          silverLight: "#a8b4c0",
+          silverDark: "#4a5568",
           // Legacy (maps to silver for compatibility)
-          gold: "#a8b4c0",
-          goldLight: "#d1d9e0",
+          gold: "#6b7a8a",
+          goldLight: "#a8b4c0",
           accent: "#1e3a5f",
         },
       },

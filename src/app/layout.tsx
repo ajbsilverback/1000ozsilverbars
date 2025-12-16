@@ -74,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-bullion-darker text-gray-100 antialiased" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-bullion-light text-gray-900 antialiased" suppressHydrationWarning>
         <Header />
         <main className="flex-grow pt-20">{children}</main>
         <Footer />

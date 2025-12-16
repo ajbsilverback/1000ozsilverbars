@@ -12,8 +12,8 @@ export default async function LiveSilverSpotIndexCard() {
   // Error state - if data === null
   if (data === null) {
     return (
-      <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111]">
-        <p className="text-gray-400 text-center text-lg">
+      <div className="max-w-3xl mx-auto rounded-xl border border-silver-200 shadow-lg p-6 sm:p-10 bg-white">
+        <p className="text-gray-500 text-center text-lg">
           Live silver spot prices are temporarily unavailable.
         </p>
       </div>
@@ -24,26 +24,26 @@ export default async function LiveSilverSpotIndexCard() {
   const isNeutral = data.change === 0;
 
   return (
-    <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111] space-y-6">
+    <div className="max-w-3xl mx-auto rounded-xl border border-silver-200 shadow-lg p-6 sm:p-10 bg-white space-y-6">
       {/* Header with live indicator */}
       <div className="flex items-center justify-between">
-        <h2 className="text-xl sm:text-2xl font-display font-semibold text-white">
+        <h2 className="text-xl sm:text-2xl font-display font-semibold text-gray-900">
           Silver Spot Price
         </h2>
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-sm text-gray-400 font-medium">Live</span>
+          <span className="text-sm text-gray-500 font-medium">Live</span>
         </div>
       </div>
 
       {/* Main Price Display */}
       <div className="relative text-center py-6">
-        {/* Subtle navy gradient accent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-700/10 via-navy-600/15 to-navy-700/10 rounded-lg" />
+        {/* Subtle silver gradient accent */}
+        <div className="absolute inset-0 bg-gradient-to-r from-silver-50 via-silver-100 to-silver-50 rounded-lg" />
         
         <div className="relative">
-          <p className="text-lg text-gray-400 mb-2">Silver Spot</p>
-          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight silver-text">
+          <p className="text-lg text-gray-500 mb-2">Silver Spot</p>
+          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-silver-700">
             {formatUSD(data.last)}
           </p>
           <p className="text-base text-gray-500 mt-2">per troy ounce</p>
@@ -54,14 +54,14 @@ export default async function LiveSilverSpotIndexCard() {
       <div className="flex justify-center">
         <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg ${
           isNeutral
-            ? "bg-neutral-500/10 border border-neutral-500/20"
+            ? "bg-gray-100 border border-gray-200"
             : isPositive 
-              ? "bg-emerald-500/10 border border-emerald-500/20" 
-              : "bg-red-500/10 border border-red-500/20"
+              ? "bg-emerald-50 border border-emerald-200" 
+              : "bg-red-50 border border-red-200"
         }`}>
           {!isNeutral && (
             <svg 
-              className={`w-5 h-5 ${isPositive ? "text-emerald-400" : "text-red-400 rotate-180"}`} 
+              className={`w-5 h-5 ${isPositive ? "text-emerald-600" : "text-red-600 rotate-180"}`} 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -76,10 +76,10 @@ export default async function LiveSilverSpotIndexCard() {
           )}
           <span className={`text-lg font-semibold ${
             isNeutral 
-              ? "text-neutral-300" 
+              ? "text-gray-600" 
               : isPositive 
-                ? "text-emerald-400" 
-                : "text-red-400"
+                ? "text-emerald-700" 
+                : "text-red-700"
           }`}>
             {formatChange(data.change, data.changePercent)}
           </span>
@@ -90,27 +90,27 @@ export default async function LiveSilverSpotIndexCard() {
       <div className="space-y-3">
         <p className="text-sm text-gray-500 uppercase tracking-wide text-center">Market Stats</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Open</p>
-            <p className="text-sm md:text-base font-semibold text-neutral-100">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Open</p>
+            <p className="text-sm md:text-base font-semibold text-gray-700">
               {data.open > 0 ? formatUSD(data.open) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">High</p>
-            <p className="text-sm md:text-base font-semibold text-emerald-400">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">High</p>
+            <p className="text-sm md:text-base font-semibold text-emerald-600">
               {data.high > 0 ? formatUSD(data.high) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Low</p>
-            <p className="text-sm md:text-base font-semibold text-red-400">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Low</p>
+            <p className="text-sm md:text-base font-semibold text-red-600">
               {data.low > 0 ? formatUSD(data.low) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
-            <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Prev Close</p>
-            <p className="text-sm md:text-base font-semibold text-neutral-100">
+          <div className="rounded-md bg-gray-50 border border-gray-100 px-4 py-3 text-center">
+            <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Prev Close</p>
+            <p className="text-sm md:text-base font-semibold text-gray-700">
               {data.previousClose > 0 ? formatUSD(data.previousClose) : "—"}
             </p>
           </div>
@@ -123,13 +123,13 @@ export default async function LiveSilverSpotIndexCard() {
       </p>
 
       {/* Attribution */}
-      <p className="text-xs text-gray-600 text-center pt-4 border-t border-silver-600/20">
+      <p className="text-xs text-gray-400 text-center pt-4 border-t border-silver-100">
         Data from{" "}
         <a
           href="https://www.monex.com/liveprices/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-silver-400 hover:text-navy-400 hover:underline"
+          className="text-navy-600 hover:text-navy-700 hover:underline"
         >
           Monex
         </a>
@@ -138,4 +138,3 @@ export default async function LiveSilverSpotIndexCard() {
     </div>
   );
 }
-
