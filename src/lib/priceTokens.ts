@@ -51,16 +51,20 @@ function formatPrice(value: number, prefix: string = "~"): string {
  * Token types supported by the system
  */
 export type PriceTokenType = 
-  | "CAPITAL_REQUIREMENT"           // ~$132,500 (ask price rounded)
-  | "CAPITAL_REQUIREMENT_RANGE"     // ~$126,000–$139,000 (ask ± premium band)
-  | "CAPITAL_REQUIREMENT_PLUS"      // ~$132,500+ (ask rounded with plus)
-  | "LIQUIDITY_THRESHOLD";          // ~$132,500+ (same as plus, for liquidity context)
+  | "CAPITAL_REQUIREMENT"           // ~$30,000 (ask price rounded)
+  | "CAPITAL_REQUIREMENT_RANGE"     // ~$28,500–$31,500 (ask ± premium band)
+  | "CAPITAL_REQUIREMENT_PLUS"      // ~$30,000+ (ask rounded with plus)
+  | "LIQUIDITY_THRESHOLD"           // ~$30,000+ (same as plus, for liquidity context)
+  | "BAR_PRICE"                     // $30,000 (1000 oz bar ask price, no tilde)
+  | "SPOT_PRICE"                    // ~$30 (per oz spot price derived from bar)
+  | "ONE_OZ_BAR_RANGE"              // $33–$40 (1 oz bar with 10-33% typical premium)
+  | "HUNDRED_OZ_BAR_RANGE";         // $3,100–$3,400 (100 oz bar with 2-4% typical premium)
 
 /**
  * Regex pattern to match tokens in strings
  * Matches: {{TOKEN_NAME}}
  */
-const TOKEN_PATTERN = /\{\{(CAPITAL_REQUIREMENT|CAPITAL_REQUIREMENT_RANGE|CAPITAL_REQUIREMENT_PLUS|LIQUIDITY_THRESHOLD)\}\}/g;
+const TOKEN_PATTERN = /\{\{(CAPITAL_REQUIREMENT|CAPITAL_REQUIREMENT_RANGE|CAPITAL_REQUIREMENT_PLUS|LIQUIDITY_THRESHOLD|BAR_PRICE|SPOT_PRICE|ONE_OZ_BAR_RANGE|HUNDRED_OZ_BAR_RANGE)\}\}/g;
 
 /**
  * Resolves a single token to its display value
@@ -79,6 +83,10 @@ export function resolveToken(
 
   const askPrice = priceData.ask;
   const roundedAsk = roundToNearest(askPrice, roundingIncrement);
+  
+  // Derive spot price from 1000 oz bar ask price (removing typical premium)
+  // 1000 oz bars typically have 0.5-2% premium, so divide by ~1.01 to estimate spot
+  const estimatedSpotPerOz = askPrice / 1000 / 1.01;
 
   switch (tokenType) {
     case "CAPITAL_REQUIREMENT":
@@ -93,6 +101,30 @@ export function resolveToken(
     case "CAPITAL_REQUIREMENT_PLUS":
     case "LIQUIDITY_THRESHOLD":
       return `${formatPrice(roundedAsk)}+`;
+
+    case "BAR_PRICE":
+      // 1000 oz bar price without tilde prefix
+      return formatPrice(roundedAsk, "");
+
+    case "SPOT_PRICE": {
+      // Per-ounce spot price rounded to nearest dollar
+      const roundedSpot = roundToNearest(estimatedSpotPerOz, 1);
+      return formatPrice(roundedSpot);
+    }
+
+    case "ONE_OZ_BAR_RANGE": {
+      // 1 oz bars typically carry 10-33% premium over spot
+      const lowPrice = roundToNearest(estimatedSpotPerOz * 1.10, 1);
+      const highPrice = roundToNearest(estimatedSpotPerOz * 1.33, 1);
+      return `${formatPrice(lowPrice, "")}–${formatPrice(highPrice, "").replace("$", "")}`;
+    }
+
+    case "HUNDRED_OZ_BAR_RANGE": {
+      // 100 oz bars typically carry 2-4% premium over spot
+      const lowPrice = roundToNearest(estimatedSpotPerOz * 100 * 1.02, 100);
+      const highPrice = roundToNearest(estimatedSpotPerOz * 100 * 1.04, 100);
+      return `${formatPrice(lowPrice, "")}–${formatPrice(highPrice, "").replace("$", "")}`;
+    }
 
     default:
       return "current market price";

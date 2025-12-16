@@ -79,7 +79,7 @@ const articleContents: Record<string, ArticleContent> = {
       {
         heading: "1 oz Silver Bars: Maximum Flexibility",
         content: [
-          "The 1 oz silver bar is accessible to the broadest range of buyers, ensuring robust liquidity when you're ready to sell. At approximately $30-$40 per bar, they're easy to accumulate over time.",
+          "The 1 oz silver bar is accessible to the broadest range of buyers, ensuring robust liquidity when you're ready to sell. At approximately {{ONE_OZ_BAR_RANGE}} per bar, they're easy to accumulate over time.",
           "Premiums on 1 oz bars typically range from 5-15% over spot, the highest of common bar sizes. This premium reflects the increased per-unit manufacturing cost and the dealer economics of handling many individual units.",
           "The key advantage is flexibility: you can sell precisely the amount you need. With 1000 oz bars, partial liquidation isn't possible.",
         ],
@@ -92,7 +92,7 @@ const articleContents: Record<string, ArticleContent> = {
       {
         heading: "100 oz Silver Bars: The Middle Ground",
         content: [
-          "One hundred-ounce silver bars occupy the middle ground between premium efficiency and practical liquidity. At roughly $3,000-$3,500 per bar, they require meaningful capital but remain accessible to serious individual investors.",
+          "One hundred-ounce silver bars occupy the middle ground between premium efficiency and practical liquidity. At roughly {{HUNDRED_OZ_BAR_RANGE}} per bar, they require meaningful capital but remain accessible to serious individual investors.",
           "Premiums typically fall in the 2-4% range, notably lower than 1 oz bars. An investor purchasing 1000 oz of silver saves hundreds of dollars by choosing 100 oz bars over 1 oz equivalents.",
           "Liquidity remains good for 100 oz bars. Most established dealers maintain ready markets, and transactions typically complete efficiently.",
         ],
