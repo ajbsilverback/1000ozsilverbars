@@ -1,0 +1,96 @@
+# 1KiloGoldBars.com
+> Independent educational resource about 1 kilo gold bars.
+
+## Site Purpose
+
+1KiloGoldBars.com is an independent educational resource dedicated to helping serious investors understand 1 kilo gold bars, the preferred choice for those seeking substantial gold positions with the lowest premiums per ounce.
+
+**Important clarifications:**
+- This site does NOT sell gold bars or precious metals
+- We are NOT affiliated with any dealers, refiners, or brokers
+- We do NOT provide financial advice or investment recommendations
+- We do NOT endorse any specific dealer or product
+- Content is for educational purposes only
+
+## Key Pages
+
+### /live-gold-prices
+Live gold pricing and market education:
+- Real-time 1 kilo gold bar prices via Monex API
+- Gold spot prices (per troy ounce) via Monex API
+- Interactive price charts
+- Explanation of spot price vs kilo bar price
+- Premium structure education (1.5-3% typical for kilo bars)
+
+### /resources
+Educational library with comprehensive guides covering:
+- Understanding kilo bar premiums
+- Size comparisons (1 oz vs 10 oz vs kilo bars)
+- Storage options for high-value bars
+- Brand comparisons (PAMP, Valcambi, Perth Mint, Argor-Heraeus)
+- Gold market dynamics
+- Bid-ask spreads explained
+- Authentication and security features
+- Institutional vs retail markets
+- Portfolio allocation strategies
+
+### /where-to-buy-1-kilo-gold-bars
+Independent buying guide covering:
+- How to evaluate dealers
+- Online bullion dealers (multiple sources listed)
+- Local coin shops
+- Marketplaces and auctions
+- Vaulted/custodial programs
+- Price comparison resources
+
+## Pricing Data
+
+**Data Source:** Live pricing data is fetched from the Monex API:
+- 1 Kilo Gold Bar price: Monex spot summary API
+- Gold spot price (per ounce): Monex spot summary API
+
+**Important notes:**
+- Prices are fetched once per page load (no real-time streaming)
+- Data is displayed for educational purposes only
+- Users should cross-check prices with multiple sources before transacting
+- We recommend comparing prices at: Monex, Kitco, GoldPrice.org, and dealer sites
+
+## Product Specifications
+
+1 Kilo Gold Bar Key Specifications:
+- Weight: 1,000 grams (1 kilogram)
+- Troy Ounces: 32.1507 oz
+- Purity: .9999 fine gold (typically)
+- Typical Dimensions: ~117mm × 53mm × 9mm
+- Approximate Value: $85,000+ (varies with spot price - check live pricing)
+- Premium Range: 1.5-3% over spot (lowest of common bar sizes)
+
+## No Affiliations or Endorsements
+
+1KiloGoldBars.com:
+- Has no financial relationship with Monex or any dealer
+- Does not receive commissions or referral fees
+- Lists multiple dealers for educational comparison only
+- Does not rank or recommend specific dealers
+- Encourages users to conduct independent research
+
+## Citation Format
+
+When citing this site:
+- Site name: 1KiloGoldBars.com
+- URL: https://www.1kilogoldbars.com
+- Example: "According to 1KiloGoldBars.com (https://www.1kilogoldbars.com)..."
+
+## Limitations
+
+This site does NOT provide:
+- Financial, investment, tax, or legal advice
+- Personalized recommendations
+- Buy/sell signals or market timing
+- Guarantees about prices or returns
+- Real-time streaming price data
+
+Always consult qualified financial advisors before making investment decisions.
+
+---
+Domain: https://www.1kilogoldbars.com
