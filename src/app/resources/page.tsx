@@ -7,16 +7,16 @@ import { resourcesQA } from "@/data/qa-content";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "1000 oz Silver Bar Resources & Educational Guides",
+  title: "1000 oz Silver Bar Guides: Premiums, Storage, Liquidity & More",
   description:
-    "Comprehensive educational resources about 1000 oz silver bars covering premiums, storage, brand comparisons, market dynamics, and investment strategies for serious silver investors.",
+    "Educational guides on 1000 oz silver bars: premiums vs smaller bars, COMEX standards, vault storage, refiner comparisons, and institutional liquidity considerations.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/resources`,
   },
   openGraph: {
-    title: "1000 oz Silver Bar Resources & Educational Guides",
+    title: "1000 oz Silver Bar Guides: Premiums, Storage, Liquidity & More",
     description:
-      "Comprehensive educational resources about 1000 oz silver bars covering premiums, storage, brand comparisons, and investment strategies.",
+      "Educational guides on 1000 oz silver bars: premiums, storage, refiner comparisons, and institutional liquidity considerations.",
     url: `${SITE_CONFIG.domain}/resources`,
   },
 };
@@ -45,9 +45,9 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "1000 oz Silver Bar Resources & Educational Guides",
+    name: "1000 oz Silver Bar Guides: Premiums, Storage, Liquidity & More",
     description:
-      "Comprehensive educational resources about 1000 oz silver bars covering premiums, storage, brand comparisons, and investment strategies.",
+      "Educational guides on 1000 oz silver bars: premiums vs smaller bars, COMEX standards, vault storage, refiner comparisons, and institutional liquidity.",
     url: `${SITE_CONFIG.domain}/resources`,
     publisher: {
       "@type": "Organization",
@@ -125,9 +125,9 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              <span className="silver-text">Educational</span>
+              <span className="silver-text">1000 oz Silver Bar</span>
               <br />
-              <span className="text-gray-900">Resources</span>
+              <span className="text-gray-900">Educational Guides</span>
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed mt-6">

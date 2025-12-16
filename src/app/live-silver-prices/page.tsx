@@ -10,16 +10,16 @@ import { pricesQA } from "@/data/qa-content";
 import { fetchProductSpot, fetchMetalSpotIndex } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "1000 oz Silver Bar Price & Live Silver Spot Prices",
+  title: "Live 1000 oz Silver Bar Price | Silver Spot Price Today",
   description:
-    "Track live 1000 oz silver bar prices and silver spot prices. Real-time charts and market data for serious silver investors.",
+    "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/live-silver-prices`,
   },
   openGraph: {
-    title: "1000 oz Silver Bar Price & Live Silver Spot Prices",
+    title: "Live 1000 oz Silver Bar Price | Silver Spot Price Today",
     description:
-      "Track live 1000 oz silver bar prices and silver spot prices. Real-time charts and market data for serious silver investors.",
+      "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts.",
     url: `${SITE_CONFIG.domain}/live-silver-prices`,
   },
 };
@@ -42,9 +42,9 @@ export default async function PricesPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "1000 oz Silver Bar Price & Live Silver Spot Prices",
+    name: "Live 1000 oz Silver Bar Price | Silver Spot Price Today",
     description:
-      "Track live 1000 oz silver bar prices and silver spot prices. Real-time charts and market data for serious silver investors.",
+      "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
     url: `${SITE_CONFIG.domain}/live-silver-prices`,
     publisher: {
       "@type": "Organization",

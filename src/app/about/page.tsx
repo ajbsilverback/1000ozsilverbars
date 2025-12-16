@@ -3,16 +3,16 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "About | 1000ozSilverBars.com",
+  title: "About Us: Independent 1000 oz Silver Bar Education",
   description:
-    "Learn about 1000ozSilverBars.com, an independent educational resource about 1000 oz silver bars. We do not sell precious metals or provide financial advice.",
+    "1000ozSilverBars.com is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments. Learn about our editorial standards.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/about`,
   },
   openGraph: {
-    title: "About | 1000ozSilverBars.com",
+    title: "About Us: Independent 1000 oz Silver Bar Education",
     description:
-      "Learn about 1000ozSilverBars.com, an independent educational resource about 1000 oz silver bars.",
+      "1000ozSilverBars.com is an independent educational resource about 1000 oz silver bars. We do not sell silver or provide financial advice.",
     url: `${SITE_CONFIG.domain}/about`,
   },
 };
@@ -21,9 +21,9 @@ export default function AboutPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About 1000ozSilverBars.com",
+    name: "About Us: Independent 1000 oz Silver Bar Education",
     description:
-      "Learn about 1000ozSilverBars.com, an independent educational resource about 1000 oz silver bars.",
+      "1000ozSilverBars.com is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments.",
     url: `${SITE_CONFIG.domain}/about`,
     publisher: {
       "@type": "Organization",

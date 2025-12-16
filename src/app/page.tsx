@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/siteConfig";
@@ -7,15 +8,30 @@ import CapitalRequirementsCard from "@/components/CapitalRequirementsCard";
 import { homeQA } from "@/data/qa-content";
 import { fetchProductSpot, formatUSD } from "@/lib/monexSpot";
 
+export const metadata: Metadata = {
+  title: "1000 oz Silver Bars: Lowest Premiums & COMEX Good Delivery Guide",
+  description:
+    "Learn why 1000 oz silver bars offer the lowest premiums per ounce. Compare bar sizes, understand COMEX good delivery standards, storage, and institutional liquidity.",
+  alternates: {
+    canonical: SITE_CONFIG.canonicalDomain,
+  },
+  openGraph: {
+    title: "1000 oz Silver Bars: Lowest Premiums & COMEX Good Delivery Guide",
+    description:
+      "Learn why 1000 oz silver bars offer the lowest premiums per ounce. Compare bar sizes, understand COMEX standards, storage, and liquidity.",
+    url: SITE_CONFIG.domain,
+  },
+};
+
 export default async function HomePage() {
   // Fetch price data once for the entire page
   const priceData = await fetchProductSpot();
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `${SITE_CONFIG.brandName} - Your Guide to 1000 oz Silver Bars`,
+    name: "1000 oz Silver Bars: Lowest Premiums & COMEX Good Delivery Guide",
     description:
-      "Comprehensive educational resource about 1000 oz silver bars, the preferred choice for serious investors seeking substantial silver positions with the lowest premiums per ounce.",
+      "Learn why 1000 oz silver bars offer the lowest premiums per ounce. Compare bar sizes, understand COMEX good delivery standards, storage, and institutional liquidity.",
     url: SITE_CONFIG.domain,
     publisher: {
       "@type": "Organization",
@@ -103,7 +119,7 @@ export default async function HomePage() {
                   </svg>
                 </Link>
                 <Link href="/resources" className="btn-secondary">
-                  Explore Educational Library
+                  Browse Educational Guides
                 </Link>
               </div>
             </div>
@@ -503,7 +519,7 @@ export default async function HomePage() {
             </Link>
             , dive into our{" "}
             <Link href="/resources" className="text-navy-700 hover:underline">
-              educational library
+              educational guides
             </Link>
             , and discover whether 1000 oz silver bars are right for your 
             investment strategy.
@@ -513,7 +529,7 @@ export default async function HomePage() {
               View Current Silver Prices
             </Link>
             <Link href="/resources" className="btn-secondary">
-              Explore Educational Library
+              Browse Educational Guides
             </Link>
           </div>
         </div>

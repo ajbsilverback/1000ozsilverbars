@@ -4,16 +4,16 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "Where to Buy 1000 oz Silver Bars | Independent Buying Guide",
+  title: "Where to Buy 1000 oz Silver Bars: Dealers, Vaults & Storage",
   description:
-    "Learn where to buy 1000 oz silver bars online and locally, including major dealers, local coin shops, marketplaces, and storage providers. Independent, educational guidance only.",
+    "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces. No affiliate relationships.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/where-to-buy-1000-oz-silver-bars`,
   },
   openGraph: {
-    title: "Where to Buy 1000 oz Silver Bars | Independent Buying Guide",
+    title: "Where to Buy 1000 oz Silver Bars: Dealers, Vaults & Storage",
     description:
-      "Learn where to buy 1000 oz silver bars online and locally, including major dealers, local coin shops, marketplaces, and storage providers.",
+      "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces.",
     url: `${SITE_CONFIG.domain}/where-to-buy-1000-oz-silver-bars`,
   },
 };
@@ -86,9 +86,9 @@ export default async function WhereToBuyPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Where to Buy 1000 oz Silver Bars | Independent Buying Guide",
+    name: "Where to Buy 1000 oz Silver Bars: Dealers, Vaults & Storage",
     description:
-      "Learn where to buy 1000 oz silver bars online and locally, including major dealers, local coin shops, marketplaces, and storage providers.",
+      "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces. No affiliate relationships.",
     url: `${SITE_CONFIG.domain}/where-to-buy-1000-oz-silver-bars`,
     publisher: {
       "@type": "Organization",

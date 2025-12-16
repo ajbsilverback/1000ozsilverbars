@@ -146,7 +146,7 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
             href="/live-silver-prices" 
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-50 border border-navy-200 text-navy-700 font-medium hover:bg-navy-100 hover:border-navy-300 transition-colors"
           >
-            <span>View Full Pricing &amp; Charts</span>
+            <span>View Live Silver Prices &amp; Charts</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
