@@ -6,7 +6,7 @@ type LiveGbozSpotCardProps = {
 };
 
 /**
- * Server Component - Fetches GBX1K price ONCE per page load
+ * Server Component - Fetches 1000 oz silver bar price ONCE per page load
  * 
  * ABSOLUTELY NO setInterval, useEffect, or client-side polling.
  * This renders ONCE per page load and never refreshes again.
@@ -17,7 +17,7 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
   // Error state - if data === null
   if (data === null) {
     return (
-      <div className="max-w-3xl mx-auto rounded-xl border border-bullion-gold/30 shadow-md p-6 sm:p-10 bg-[#111]">
+      <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111]">
         <p className="text-gray-400 text-center text-lg">
           Live pricing is temporarily unavailable.
         </p>
@@ -29,11 +29,11 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
   const isNeutral = data.change === 0;
 
   return (
-    <div className="max-w-3xl mx-auto rounded-xl border border-bullion-gold/30 shadow-md p-6 sm:p-10 bg-[#111] space-y-6">
+    <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111] space-y-6">
       {/* Header with live indicator */}
       <div className="flex items-center justify-between">
         <h2 className="text-xl sm:text-2xl font-display font-semibold text-white">
-          Live 1 Kilo Gold Bar Price
+          Live 1000 oz Silver Bar Price
         </h2>
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -41,17 +41,17 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
         </div>
       </div>
 
-      {/* Main Price Display with gold gradient accent */}
+      {/* Main Price Display with navy accent */}
       <div className="relative text-center py-6">
-        {/* Subtle gold gradient streak behind price */}
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-yellow-500/20 to-yellow-500/10 rounded-lg" />
+        {/* Subtle navy gradient streak behind price */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-700/10 via-navy-600/20 to-navy-700/10 rounded-lg" />
         
         <div className="relative">
           <p className="text-lg text-gray-400 mb-2">Current Ask Price</p>
-          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight gold-text">
+          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight silver-text">
             {formatUSD(data.ask)}
           </p>
-          <p className="text-lg text-gray-400 mt-2">per kilo bar (32.15 oz)</p>
+          <p className="text-lg text-gray-400 mt-2">per 1000 oz bar</p>
         </div>
       </div>
 
@@ -97,9 +97,9 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
           <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">Bid</p>
           <p className="text-xl font-semibold text-gray-200">{formatUSD(data.bid)}</p>
         </div>
-        <div className="text-center p-4 rounded-lg bg-bullion-gold/10 border border-bullion-gold/20">
-          <p className="text-sm text-bullion-gold uppercase tracking-wide mb-1">Ask</p>
-          <p className="text-xl font-semibold text-bullion-gold">{formatUSD(data.ask)}</p>
+        <div className="text-center p-4 rounded-lg bg-navy-700/20 border border-navy-600/30">
+          <p className="text-sm text-navy-400 uppercase tracking-wide mb-1">Ask</p>
+          <p className="text-xl font-semibold text-silver-300">{formatUSD(data.ask)}</p>
         </div>
       </div>
 
@@ -107,25 +107,25 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       <div className="space-y-3">
         <p className="text-sm text-gray-500 uppercase tracking-wide text-center">Market Stats</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Open</p>
             <p className="text-sm md:text-base font-semibold text-neutral-100">
               {data.open > 0 ? formatUSD(data.open) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">High</p>
             <p className="text-sm md:text-base font-semibold text-emerald-400">
               {data.high > 0 ? formatUSD(data.high) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Low</p>
             <p className="text-sm md:text-base font-semibold text-red-400">
               {data.low > 0 ? formatUSD(data.low) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Prev Close</p>
             <p className="text-sm md:text-base font-semibold text-neutral-100">
               {data.previousClose > 0 ? formatUSD(data.previousClose) : "—"}
@@ -143,8 +143,8 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       {showCta && (
         <div className="text-center pt-2">
           <Link 
-            href="/live-gold-prices" 
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-bullion-gold/10 border border-bullion-gold/30 text-bullion-gold font-medium hover:bg-bullion-gold/20 transition-colors"
+            href="/live-silver-prices" 
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-700/20 border border-navy-600/40 text-silver-300 font-medium hover:bg-navy-700/30 hover:border-navy-500 transition-colors"
           >
             <span>View Full Pricing &amp; Charts</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,13 +155,13 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       )}
 
       {/* Attribution */}
-      <p className="text-xs text-gray-600 text-center pt-4 border-t border-bullion-gold/10">
+      <p className="text-xs text-gray-600 text-center pt-4 border-t border-silver-600/20">
         Prices provided by{" "}
         <a
           href="https://www.monex.com/liveprices/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-bullion-gold hover:underline"
+          className="text-silver-400 hover:text-navy-400 hover:underline"
         >
           Monex
         </a>

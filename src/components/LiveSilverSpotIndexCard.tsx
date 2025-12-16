@@ -1,20 +1,20 @@
-import { fetchGoldSpotIndex, formatUSD, formatChange, formatTimestamp } from "@/lib/monexSpot";
+import { fetchMetalSpotIndex, formatUSD, formatChange, formatTimestamp } from "@/lib/monexSpot";
 
 /**
- * Server Component - Fetches Gold Spot Index (GBXSPOT) ONCE per page load
+ * Server Component - Fetches Silver Spot Index ONCE per page load
  * 
  * ABSOLUTELY NO setInterval, useEffect, or client-side polling.
  * This renders ONCE per page load and never refreshes again.
  */
-export default async function LiveGoldSpotIndexCard() {
-  const data = await fetchGoldSpotIndex();
+export default async function LiveSilverSpotIndexCard() {
+  const data = await fetchMetalSpotIndex();
 
   // Error state - if data === null
   if (data === null) {
     return (
-      <div className="max-w-3xl mx-auto rounded-xl border border-bullion-gold/30 shadow-md p-6 sm:p-10 bg-[#111]">
+      <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111]">
         <p className="text-gray-400 text-center text-lg">
-          Live gold spot prices are temporarily unavailable.
+          Live silver spot prices are temporarily unavailable.
         </p>
       </div>
     );
@@ -24,11 +24,11 @@ export default async function LiveGoldSpotIndexCard() {
   const isNeutral = data.change === 0;
 
   return (
-    <div className="max-w-3xl mx-auto rounded-xl border border-bullion-gold/30 shadow-md p-6 sm:p-10 bg-[#111] space-y-6">
+    <div className="max-w-3xl mx-auto rounded-xl border border-silver-600/30 shadow-md p-6 sm:p-10 bg-[#111] space-y-6">
       {/* Header with live indicator */}
       <div className="flex items-center justify-between">
         <h2 className="text-xl sm:text-2xl font-display font-semibold text-white">
-          Live Gold Spot Prices
+          Silver Spot Price
         </h2>
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -38,12 +38,12 @@ export default async function LiveGoldSpotIndexCard() {
 
       {/* Main Price Display */}
       <div className="relative text-center py-6">
-        {/* Subtle gradient accent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 via-yellow-500/10 to-yellow-500/5 rounded-lg" />
+        {/* Subtle navy gradient accent */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-700/10 via-navy-600/15 to-navy-700/10 rounded-lg" />
         
         <div className="relative">
-          <p className="text-lg text-gray-400 mb-2">Gold Spot Index</p>
-          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight gold-text">
+          <p className="text-lg text-gray-400 mb-2">Silver Spot</p>
+          <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight silver-text">
             {formatUSD(data.last)}
           </p>
           <p className="text-base text-gray-500 mt-2">per troy ounce</p>
@@ -90,25 +90,25 @@ export default async function LiveGoldSpotIndexCard() {
       <div className="space-y-3">
         <p className="text-sm text-gray-500 uppercase tracking-wide text-center">Market Stats</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Open</p>
             <p className="text-sm md:text-base font-semibold text-neutral-100">
               {data.open > 0 ? formatUSD(data.open) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">High</p>
             <p className="text-sm md:text-base font-semibold text-emerald-400">
               {data.high > 0 ? formatUSD(data.high) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Low</p>
             <p className="text-sm md:text-base font-semibold text-red-400">
               {data.low > 0 ? formatUSD(data.low) : "—"}
             </p>
           </div>
-          <div className="rounded-md bg-[#161616] border border-yellow-500/10 px-4 py-3 text-center">
+          <div className="rounded-md bg-[#161616] border border-silver-600/20 px-4 py-3 text-center">
             <p className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Prev Close</p>
             <p className="text-sm md:text-base font-semibold text-neutral-100">
               {data.previousClose > 0 ? formatUSD(data.previousClose) : "—"}
@@ -123,13 +123,13 @@ export default async function LiveGoldSpotIndexCard() {
       </p>
 
       {/* Attribution */}
-      <p className="text-xs text-gray-600 text-center pt-4 border-t border-bullion-gold/10">
+      <p className="text-xs text-gray-600 text-center pt-4 border-t border-silver-600/20">
         Data from{" "}
         <a
           href="https://www.monex.com/liveprices/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-bullion-gold hover:underline"
+          className="text-silver-400 hover:text-navy-400 hover:underline"
         >
           Monex
         </a>
@@ -138,5 +138,4 @@ export default async function LiveGoldSpotIndexCard() {
     </div>
   );
 }
-
 

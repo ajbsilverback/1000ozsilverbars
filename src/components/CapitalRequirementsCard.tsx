@@ -6,7 +6,7 @@ interface CapitalRequirementsCardProps {
 }
 
 /**
- * Server Component - Displays the approximate capital required to purchase a 1 kilo gold bar.
+ * Server Component - Displays the approximate capital required to purchase a 1000 oz silver bar.
  * 
  * Can receive pre-fetched price data or will fetch its own if not provided.
  * NO polling, NO intervals - renders ONCE per page load only.
@@ -31,21 +31,21 @@ export default async function CapitalRequirementsCard({ priceData }: CapitalRequ
 
   return (
     <div className="card p-8 max-w-sm">
-      <h3 className="text-xl font-display font-semibold text-bullion-gold mb-4 text-center">
+      <h3 className="text-xl font-display font-semibold text-silver-400 mb-4 text-center">
         Capital Requirements
       </h3>
       <p className="text-gray-400 text-sm text-center mb-6">
         {hasValidPrice
-          ? "Based on current 1 kilo gold bar ask price:"
-          : "To purchase a single 1 kilo gold bar:"}
+          ? "Based on current 1000 oz silver bar ask price:"
+          : "To purchase a single 1000 oz silver bar:"}
       </p>
-      <div className="text-center py-6 rounded-lg bg-bullion-gold/10 border border-bullion-gold/30">
+      <div className="text-center py-6 rounded-lg bg-navy-700/10 border border-navy-600/30">
         {hasValidPrice ? (
           <>
-            <span className="text-4xl font-display font-bold gold-text">
+            <span className="text-4xl font-display font-bold silver-text">
               ≈ {roundToHundred(data.ask)}
             </span>
-            <p className="text-gray-400 text-sm mt-2">per kilo bar</p>
+            <p className="text-gray-400 text-sm mt-2">per 1000 oz bar</p>
           </>
         ) : (
           <>
@@ -57,7 +57,7 @@ export default async function CapitalRequirementsCard({ priceData }: CapitalRequ
         )}
       </div>
       <p className="text-gray-500 text-xs text-center mt-4">
-        Prices vary with spot gold and dealer premiums
+        Prices vary with spot silver and dealer premiums
       </p>
     </div>
   );

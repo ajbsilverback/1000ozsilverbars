@@ -13,13 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/live-gold-prices`,
+      url: `${baseUrl}/live-silver-prices`,
       lastModified: new Date(),
       changeFrequency: "daily" as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/where-to-buy-1-kilo-gold-bars`,
+      url: `${baseUrl}/where-to-buy-1000-oz-silver-bars`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,

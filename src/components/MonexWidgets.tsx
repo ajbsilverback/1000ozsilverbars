@@ -2,14 +2,14 @@
 
 import { useEffect } from "react";
 
-export function GoldPriceChart() {
+export function SilverPriceChart() {
   useEffect(() => {
     const containerId = "475a1e90-7ecc-4a36-a85b-ef15136924bb";
     const container = document.getElementById(containerId);
     if (container && !container.hasChildNodes()) {
       const script = document.createElement("script");
       script.async = true;
-      script.src = `https://widget.nfusionsolutions.com/custom/monex/script/chart/1/a0fa8f6f-0b7b-4d1a-bb3f-045d29d8aee5/${containerId}?selected=gold`;
+      script.src = `https://widget.nfusionsolutions.com/custom/monex/script/chart/1/a0fa8f6f-0b7b-4d1a-bb3f-045d29d8aee5/${containerId}?selected=silver`;
       document.body.appendChild(script);
     }
   }, []);
@@ -28,7 +28,7 @@ export function GoldPriceChart() {
               href="https://www.monex.com/liveprices/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-bullion-gold hover:underline"
+              className="text-silver-400 hover:underline"
             >
               Monex
             </a>
@@ -39,7 +39,7 @@ export function GoldPriceChart() {
   );
 }
 
-export function GoldPriceTable() {
+export function SilverPriceTable() {
   useEffect(() => {
     const containerId = "797295b4-1ec7-4732-ae8c-d37569df73c3";
     const container = document.getElementById(containerId);
@@ -65,7 +65,7 @@ export function GoldPriceTable() {
               href="https://www.monex.com/liveprices/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-bullion-gold hover:underline"
+              className="text-silver-400 hover:underline"
             >
               Monex
             </a>
@@ -76,5 +76,6 @@ export function GoldPriceTable() {
   );
 }
 
-
-
+// Legacy exports for backward compatibility
+export const GoldPriceChart = SilverPriceChart;
+export const GoldPriceTable = SilverPriceTable;
