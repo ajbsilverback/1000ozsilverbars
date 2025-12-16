@@ -90,10 +90,22 @@ export default async function WhereToBuyPage() {
     description:
       "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces. No affiliate relationships.",
     url: `${SITE_CONFIG.domain}/where-to-buy-1000-oz-silver-bars`,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.domain,
+      name: SITE_CONFIG.brandName,
+    },
     publisher: {
       "@type": "Organization",
-      name: SITE_CONFIG.brandName,
-      url: SITE_CONFIG.domain,
+      "@id": `${SITE_CONFIG.domain}/#organization`,
+    },
+    about: {
+      "@type": "Thing",
+      name: "Buying 1000 oz Silver Bars",
+    },
+    mainContentOfPage: {
+      "@type": "WebPageElement",
+      cssSelector: "main",
     },
   };
 
@@ -103,26 +115,31 @@ export default async function WhereToBuyPage() {
     name: "Where to buy 1000 oz silver bars",
     description:
       "Types of vendors and platforms for purchasing 1000 oz silver bars",
+    numberOfItems: 4,
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Online Bullion Dealers",
+        description: "Major online dealers offering 1000 oz silver bars with competitive pricing and shipping",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Local Coin Shops",
+        description: "Local dealers who may order or stock 1000 oz bars for in-person transactions",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Marketplaces & Auctions",
+        description: "Online marketplaces and auction houses offering 1000 oz silver bars",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: "Vaulted & Custodial Programs",
+        description: "Professional vault storage programs for allocated 1000 oz bar ownership",
       },
     ],
   };

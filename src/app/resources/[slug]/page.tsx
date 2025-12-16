@@ -178,19 +178,34 @@ export default async function ResourcePage({ params }: Props) {
     headline: resource.title,
     description: resource.description,
     url: `${SITE_CONFIG.domain}/resources/${slug}`,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.domain,
+      name: SITE_CONFIG.brandName,
+    },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_CONFIG.domain}/#organization`,
       name: SITE_CONFIG.brandName,
       url: SITE_CONFIG.domain,
     },
     author: {
       "@type": "Organization",
+      "@id": `${SITE_CONFIG.domain}/#organization`,
       name: SITE_CONFIG.brandName,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_CONFIG.domain}/resources/${slug}`,
     },
+    articleSection: resource.category,
+    about: {
+      "@type": "Thing",
+      name: "1000 oz Silver Bars",
+    },
+    educationalLevel: "Intermediate",
+    learningResourceType: "Guide",
+    inLanguage: "en-US",
   };
 
   return (

@@ -49,10 +49,18 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
     description:
       "Educational guides on 1000 oz silver bars: premiums vs smaller bars, COMEX standards, vault storage, refiner comparisons, and institutional liquidity.",
     url: `${SITE_CONFIG.domain}/resources`,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.domain,
+      name: SITE_CONFIG.brandName,
+    },
     publisher: {
       "@type": "Organization",
-      name: SITE_CONFIG.brandName,
-      url: SITE_CONFIG.domain,
+      "@id": `${SITE_CONFIG.domain}/#organization`,
+    },
+    about: {
+      "@type": "Thing",
+      name: "1000 oz Silver Bar Education",
     },
     mainEntity: {
       "@type": "ItemList",
@@ -60,6 +68,7 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
         "@type": "ListItem",
         position: index + 1,
         name: resource.title,
+        description: resource.description,
         url: `${SITE_CONFIG.domain}/resources/${resource.slug}`,
       })),
     },

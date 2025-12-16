@@ -25,10 +25,18 @@ export default function AboutPage() {
     description:
       "1000ozSilverBars.com is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments.",
     url: `${SITE_CONFIG.domain}/about`,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.domain,
+      name: SITE_CONFIG.brandName,
+    },
     publisher: {
       "@type": "Organization",
-      name: SITE_CONFIG.brandName,
-      url: SITE_CONFIG.domain,
+      "@id": `${SITE_CONFIG.domain}/#organization`,
+    },
+    mainEntity: {
+      "@type": "Organization",
+      "@id": `${SITE_CONFIG.domain}/#organization`,
     },
   };
 

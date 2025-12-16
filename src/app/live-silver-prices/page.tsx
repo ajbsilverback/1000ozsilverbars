@@ -46,10 +46,22 @@ export default async function PricesPage() {
     description:
       "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
     url: `${SITE_CONFIG.domain}/live-silver-prices`,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.domain,
+      name: SITE_CONFIG.brandName,
+    },
     publisher: {
       "@type": "Organization",
-      name: SITE_CONFIG.brandName,
-      url: SITE_CONFIG.domain,
+      "@id": `${SITE_CONFIG.domain}/#organization`,
+    },
+    about: {
+      "@type": "Thing",
+      name: "Silver Spot Prices",
+    },
+    mainContentOfPage: {
+      "@type": "WebPageElement",
+      cssSelector: "main",
     },
   };
 

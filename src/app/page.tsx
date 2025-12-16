@@ -33,30 +33,27 @@ export default async function HomePage() {
     description:
       "Learn why 1000 oz silver bars offer the lowest premiums per ounce. Compare bar sizes, understand COMEX good delivery standards, storage, and institutional liquidity.",
     url: SITE_CONFIG.domain,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.domain,
+      name: SITE_CONFIG.brandName,
+    },
     publisher: {
       "@type": "Organization",
-      name: SITE_CONFIG.brandName,
-      url: SITE_CONFIG.domain,
+      "@id": `${SITE_CONFIG.domain}/#organization`,
     },
-  };
-
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "1000 oz Silver Bars",
-    description:
-      "One thousand troy ounce COMEX good delivery silver bullion bars, offering the lowest premiums per ounce for serious precious metals investors.",
-    brand: {
-      "@type": "Brand",
-      name: SITE_CONFIG.brandName,
+    about: {
+      "@type": "Thing",
+      name: "1000 oz Silver Bars",
+      description: "One thousand troy ounce COMEX good delivery silver bullion bars",
     },
-    category: "Silver Bars",
-    material: "Silver",
-    weight: {
-      "@type": "QuantitativeValue",
-      value: 1000,
-      unitCode: "ONT",
-      unitText: "troy ounces",
+    mainContentOfPage: {
+      "@type": "WebPageElement",
+      cssSelector: "main",
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".hero-description"],
     },
   };
 
@@ -65,10 +62,6 @@ export default async function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
 
       {/* Hero Section */}
