@@ -113,9 +113,9 @@ export default async function HomePage() {
               <Image
                 src="/1000-oz-silver-bar.png"
                 alt="1000 oz silver bar"
-                width={500}
-                height={500}
-                className="max-w-sm w-full h-auto"
+                width={600}
+                height={600}
+                className="max-w-lg w-full h-auto"
                 priority
               />
             </div>
