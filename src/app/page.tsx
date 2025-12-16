@@ -111,7 +111,7 @@ export default async function HomePage() {
             {/* Right: Hero Image */}
             <div className="mt-12 lg:mt-0 flex justify-center lg:justify-end">
               <Image
-                src="/1000-oz-silver-bar-hero.png"
+                src="/1000-oz-silver-bar.png"
                 alt="1000 oz silver bar"
                 width={500}
                 height={500}
