@@ -166,7 +166,11 @@ export default async function WhereToBuyPage() {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               An independent educational guide to understanding your options
-              for purchasing 1000 oz (COMEX good delivery) silver bars from various sources.
+              for purchasing{" "}
+              <Link href="/" className="text-navy-700 hover:underline">
+                1000 oz silver bars
+              </Link>{" "}
+              (COMEX good delivery) from various sources.
             </p>
             <div className="bg-navy-50 border border-navy-100 rounded-xl p-6 max-w-2xl mx-auto">
               <p className="text-gray-600 text-sm">
@@ -208,8 +212,15 @@ export default async function WhereToBuyPage() {
                   Pricing & Spreads
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Compare premiums over spot price across multiple dealers.
-                  1000 oz bars typically have 0.5-2% premiums, significantly lower
+                  Compare{" "}
+                  <Link href="/resources/premiums-explained" className="text-navy-700 hover:underline">
+                    premiums
+                  </Link>{" "}
+                  over{" "}
+                  <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
+                    spot price
+                  </Link>{" "}
+                  across multiple dealers. 1000 oz bars typically have 0.5-2% premiums, significantly lower
                   than smaller denominations.
                 </p>
               </div>
@@ -436,7 +447,10 @@ export default async function WhereToBuyPage() {
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
               <p className="text-gray-700 mb-6">
-                For 1000 oz bars, many investors prefer professional vault storage
+                For 1000 oz bars, many investors prefer professional{" "}
+                <Link href="/resources/storage-options" className="text-navy-700 hover:underline">
+                  vault storage
+                </Link>{" "}
                 rather than taking physical delivery. Given the weight (68-70 lbs) and 
                 value, this approach provides institutional-grade security.
               </p>

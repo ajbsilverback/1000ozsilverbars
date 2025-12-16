@@ -61,7 +61,7 @@ const articleContents: Record<string, ArticleContent> = {
   },
   "size-comparison": {
     keyTakeaways: [
-      "1000 oz bars offer the lowest premiums but require {{KILO_PRICE}}+ capital commitment",
+      "1000 oz bars offer the lowest premiums but require {{BAR_PRICE}}+ capital commitment",
       "1 oz bars maximize flexibility at the cost of higher premiums (5-15%)",
       "100 oz bars represent a middle ground suitable for mid-sized positions",
       "Many investors combine sizes to optimize both efficiency and flexibility",
@@ -105,7 +105,7 @@ const articleContents: Record<string, ArticleContent> = {
       {
         heading: "1000 oz Silver Bars: Maximum Premium Efficiency",
         content: [
-          "The 1000 oz silver bar represents the ultimate in premium efficiency for physical silver. At approximately {{KILO_PRICE}}, these bars deliver the lowest retail premiums, typically just 0.5-2% over spot.",
+          "The 1000 oz silver bar represents the ultimate in premium efficiency for physical silver. At approximately {{BAR_PRICE}}, these bars deliver the lowest retail premiums, typically just 0.5-2% over spot.",
           "Premium savings are substantial at this scale. Compared to equivalent weight in 1 oz bars, a 1000 oz bar might save $2,000-$3,000 in premiums on a single purchase. For investors building substantial positions, these savings compound significantly.",
           "1000 oz bars are the standard for COMEX silver futures delivery and institutional trading, ensuring deep liquidity and efficient pricing in institutional channels.",
         ],
@@ -127,7 +127,7 @@ const articleContents: Record<string, ArticleContent> = {
   },
   "storage-options": {
     keyTakeaways: [
-      "Professional vault storage is recommended for 1000 oz bars given their {{KILO_PRICE}}+ value",
+      "Professional vault storage is recommended for 1000 oz bars given their {{BAR_PRICE}}+ value",
       "Allocated storage segregates your specific bars with unique serial numbers",
       "Vault storage typically costs 0.3-0.5% of value annually for silver",
       "Home storage is impractical given the 68-70 lb weight per bar",
@@ -137,7 +137,7 @@ const articleContents: Record<string, ArticleContent> = {
       {
         heading: "The Importance of Proper 1000 oz Bar Storage",
         content: [
-          "Owning 1000 oz silver bars comes with significant storage responsibility. With individual bars valued at {{KILO_PRICE}} or more and weighing 68-70 pounds, appropriate security and logistics are essential.",
+          "Owning 1000 oz silver bars comes with significant storage responsibility. With individual bars valued at {{BAR_PRICE}} or more and weighing 68-70 pounds, appropriate security and logistics are essential.",
           "Unlike smaller bars that might be stored at home, the weight and value concentration of 1000 oz bars typically argues for professional solutions. A few bars representing over $100,000 warrants institutional-grade protection.",
           "Your storage decision should reflect your total holdings value, access requirements, insurance considerations, and practical logistics given the substantial weight.",
         ],
@@ -231,7 +231,7 @@ const articleContents: Record<string, ArticleContent> = {
         heading: "Understanding 1000 oz Bar Liquidity",
         content: [
           "Liquidity describes how quickly and easily an asset can be converted to cash. For silver investors, understanding liquidity is crucial before committing to 1000 oz bars.",
-          "1000 oz silver bars are less liquid than smaller denominations in retail markets. The {{KILO_PRICE}} capital requirement and 68-70 lb weight limit the buyer pool. Fewer individuals purchase bars of this size.",
+          "1000 oz silver bars are less liquid than smaller denominations in retail markets. The {{BAR_PRICE}} capital requirement and 68-70 lb weight limit the buyer pool. Fewer individuals purchase bars of this size.",
           "However, 'less liquid' doesn't mean illiquid. 1000 oz bars are the COMEX delivery standard, meaning institutional infrastructure exists for trading them. The challenge is connecting with the right channels.",
         ],
       },
@@ -251,7 +251,7 @@ const articleContents: Record<string, ArticleContent> = {
       {
         heading: "The Partial Liquidation Challenge",
         content: [
-          "The primary liquidity limitation of 1000 oz bars is indivisibility. If you own one 1000 oz bar and need $5,000 in cash, you must sell the entire bar (worth {{KILO_PRICE}}) or find alternative liquidity sources.",
+          "The primary liquidity limitation of 1000 oz bars is indivisibility. If you own one 1000 oz bar and need $5,000 in cash, you must sell the entire bar (worth {{BAR_PRICE}}) or find alternative liquidity sources.",
           "Investors anticipating potential partial liquidation needs should consider holding some smaller bars alongside 1000 oz bars. A common approach: maintain core holdings in 1000 oz bars with a reserve of 100 oz or smaller bars for flexibility.",
           "Estate planning considerations also favor some divisibility. Smaller denominations simplify equitable distribution among multiple heirs.",
         ],
@@ -320,7 +320,7 @@ const articleContents: Record<string, ArticleContent> = {
         subheading: "Calculating Your Break-Even",
         subcontent: [
           "Before purchasing, calculate the price appreciation required to break even after accounting for the full spread. If you pay 1% over spot and expect to receive 0.5% below spot when selling, you need 1.5% appreciation to break even.",
-          "For a 1000 oz bar at {{KILO_PRICE}}, that 1.5% represents a few hundred dollars in silver price movement—quite achievable over typical holding periods.",
+          "For a 1000 oz bar at {{BAR_PRICE}}, that 1.5% represents a few hundred dollars in silver price movement—quite achievable over typical holding periods.",
         ],
       },
     ],
@@ -337,7 +337,7 @@ const articleContents: Record<string, ArticleContent> = {
       {
         heading: "Why Authentication Matters for 1000 oz Bars",
         content: [
-          "With individual bars valued at {{KILO_PRICE}}+, authentication is critical for 1000 oz silver purchases. Verifying you're receiving genuine COMEX-quality product protects your investment.",
+          "With individual bars valued at {{BAR_PRICE}}+, authentication is critical for 1000 oz silver purchases. Verifying you're receiving genuine COMEX-quality product protects your investment.",
           "The good news: COMEX-accredited bars must meet strict standards. The institutional nature of the 1000 oz market provides some protection against counterfeiting—sophisticated fakes are difficult to introduce into established channels.",
           "For legitimate purchases from reputable dealers, authentication concerns are manageable. Risk increases when buying from unknown sources or secondary markets.",
         ],

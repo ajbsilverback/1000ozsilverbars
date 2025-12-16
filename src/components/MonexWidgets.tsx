@@ -118,6 +118,3 @@ export function SilverPriceTable() {
   );
 }
 
-// Legacy exports for backward compatibility
-export const GoldPriceChart = SilverPriceChart;
-export const GoldPriceTable = SilverPriceTable;

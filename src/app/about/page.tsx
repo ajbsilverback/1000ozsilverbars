@@ -69,14 +69,26 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 {SITE_CONFIG.brandName} is an independent educational website
                 dedicated to helping serious investors understand{" "}
-                {SITE_CONFIG.primaryProduct}, the preferred choice for those 
-                seeking substantial silver positions with the lowest premiums 
-                per ounce.
+                <Link href="/" className="text-navy-700 hover:underline">
+                  {SITE_CONFIG.primaryProduct}
+                </Link>, the preferred choice for those 
+                seeking substantial silver positions with the{" "}
+                <Link href="/resources/premiums-explained" className="text-navy-700 hover:underline">
+                  lowest premiums per ounce
+                </Link>.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Our mission is to provide clear, unbiased information about 
-                1000 oz bar investing, including pricing mechanics, storage 
-                requirements, refiner comparisons, and the trade-offs between 
+                1000 oz bar investing, including{" "}
+                <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
+                  pricing mechanics
+                </Link>,{" "}
+                <Link href="/resources/storage-options" className="text-navy-700 hover:underline">
+                  storage requirements
+                </Link>,{" "}
+                <Link href="/resources/brand-differences" className="text-navy-700 hover:underline">
+                  refiner comparisons
+                </Link>, and the trade-offs between 
                 bar sizes.
               </p>
             </section>
@@ -233,6 +245,9 @@ export default function AboutPage() {
               </Link>
               <Link href="/live-silver-prices" className="btn-secondary">
                 View Silver Prices
+              </Link>
+              <Link href="/where-to-buy-1000-oz-silver-bars" className="btn-secondary">
+                Where to Buy
               </Link>
               <Link href="/resources" className="btn-secondary">
                 Browse Resources

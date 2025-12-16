@@ -181,9 +181,14 @@ export default async function HomePage() {
                 Lowest Premiums
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                1000 oz bars command the lowest retail premiums of any commonly 
-                traded bar size, typically just 0.5-2% over spot price. Compared 
-                to 1 oz bars or rounds (5-15% premium), you get significantly more silver 
+                1000 oz bars command the{" "}
+                <Link href="/resources/premiums-explained" className="text-navy-700 hover:underline">
+                  lowest retail premiums
+                </Link>{" "}
+                of any commonly traded bar size, typically just 0.5-2% over{" "}
+                <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
+                  spot price
+                </Link>. Compared to 1 oz bars or rounds (5-15% premium), you get significantly more silver 
                 for your money.
               </p>
             </div>
@@ -432,12 +437,19 @@ export default async function HomePage() {
                 1000 oz bars are less liquid than smaller denominations. While 
                 established dealers maintain ready markets, the buyer pool 
                 is smaller than for 1 oz or 100 oz bars. Selling may take longer and 
-                require connecting with specialized dealers.
+                require connecting with{" "}
+                <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
+                  specialized dealers
+                </Link>.
               </p>
               <p className="text-gray-500 text-sm">
                 <strong className="text-navy-700">Consider:</strong> If you 
                 anticipate needing to liquidate portions of your holdings, 
-                smaller bars may be more practical despite higher premiums.
+                smaller bars may be more practical despite higher premiums. 
+                Learn more in our{" "}
+                <Link href="/resources/liquidity-considerations" className="text-navy-700 hover:underline">
+                  liquidity guide
+                </Link>.
               </p>
             </div>
 
@@ -464,8 +476,10 @@ export default async function HomePage() {
               </h3>
               <p className="text-gray-600 mb-4">
                 A 1000 oz bar weighs approximately 68-70 pounds and requires secure storage 
-                capable of protecting substantial value. Professional vault 
-                storage, while adding costs, often makes sense for holdings 
+                capable of protecting substantial value. Professional{" "}
+                <Link href="/resources/storage-options" className="text-navy-700 hover:underline">
+                  vault storage
+                </Link>, while adding costs, often makes sense for holdings 
                 of this magnitude.
               </p>
               <p className="text-gray-500 text-sm">
@@ -480,15 +494,21 @@ export default async function HomePage() {
                 Authentication Importance
               </h3>
               <p className="text-gray-600 mb-4">
-                Given the high value, buy only from established dealers 
+                Given the high value, buy only from{" "}
+                <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
+                  established dealers
+                </Link>{" "}
                 and choose bars from LBMA-accredited refiners with full 
                 documentation. Counterfeit risk increases with bar value, 
                 making provenance critical.
               </p>
               <p className="text-gray-500 text-sm">
                 <strong className="text-navy-700">Consider:</strong> COMEX 
-                good delivery bars from refiners like Johnson Matthey, 
-                Asahi, and KGHM include documentation that aids authentication.
+                good delivery bars from{" "}
+                <Link href="/resources/brand-differences" className="text-navy-700 hover:underline">
+                  refiners like Johnson Matthey, Asahi, and KGHM
+                </Link>{" "}
+                include documentation that aids authentication.
               </p>
             </div>
           </div>

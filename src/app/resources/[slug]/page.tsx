@@ -53,7 +53,7 @@ function getMonexAnchorText(slug: string): string {
 
 // Replace price tokens in content strings
 function replacePriceTokens(text: string, barPrice: string): string {
-  return text.replace(/\{\{KILO_PRICE\}\}/g, barPrice);
+  return text.replace(/\{\{BAR_PRICE\}\}/g, barPrice);
 }
 
 // Generate AI summary bullets based on resource content
@@ -328,10 +328,19 @@ export default async function ResourcePage({ params }: Props) {
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Link
+                href="/"
+                className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
+              >
+                <span>1000 oz silver bar overview</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
                 href="/live-silver-prices"
                 className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
-                <span>View current silver prices</span>
+                <span>Live silver prices</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -340,7 +349,7 @@ export default async function ResourcePage({ params }: Props) {
                 href="/where-to-buy-1000-oz-silver-bars"
                 className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
-                <span>Where to buy 1000 oz silver bars</span>
+                <span>Where to buy 1000 oz bars</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -349,7 +358,7 @@ export default async function ResourcePage({ params }: Props) {
                 href="/resources"
                 className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
-                <span>Browse all resources</span>
+                <span>All educational guides</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

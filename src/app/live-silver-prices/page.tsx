@@ -188,8 +188,14 @@ export default async function PricesPage() {
                 <p className="text-gray-600 leading-relaxed">
                   The 1000 oz bar commands the <strong className="text-gray-900">lowest 
                   retail premium</strong> of common bar sizes, typically just 
-                  0.5-2% over spot. This premium covers refining, assaying, 
-                  shipping, and dealer margins.
+                  0.5-2% over spot. This{" "}
+                  <Link href="/resources/premiums-explained" className="text-navy-700 hover:underline">
+                    premium
+                  </Link>{" "}
+                  covers refining, assaying, shipping, and{" "}
+                  <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
+                    dealer margins
+                  </Link>.
                 </p>
               </div>
 
@@ -239,7 +245,11 @@ export default async function PricesPage() {
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-3">
                   The premium savings on 1000 oz bars are substantial when building 
-                  a significant silver position:
+                  a significant silver position. See our{" "}
+                  <Link href="/resources/size-comparison" className="text-navy-700 hover:underline">
+                    complete bar size comparison
+                  </Link>{" "}
+                  for detailed analysis:
                 </p>
                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
                   <p className="text-gray-500 text-sm mb-2">

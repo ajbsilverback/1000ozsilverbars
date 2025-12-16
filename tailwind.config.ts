@@ -55,9 +55,7 @@ const config: Config = {
           silver: "#6b7a8a",
           silverLight: "#a8b4c0",
           silverDark: "#4a5568",
-          // Legacy (maps to silver for compatibility)
-          gold: "#6b7a8a",
-          goldLight: "#a8b4c0",
+          // Primary accent
           accent: "#1e3a5f",
         },
       },

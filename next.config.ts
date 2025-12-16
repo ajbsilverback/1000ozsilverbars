@@ -10,12 +10,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/prices",
-        destination: "/live-gold-prices",
+        destination: "/live-silver-prices",
         permanent: true,
       },
       {
         source: "/where-to-buy",
-        destination: "/where-to-buy-1-kilo-gold-bars",
+        destination: "/where-to-buy-1000-oz-silver-bars",
         permanent: true,
       },
     ];

@@ -227,9 +227,6 @@ export interface MetalSpotIndexSummary {
   changePercent: number;
 }
 
-/** @deprecated Use MetalSpotIndexSummary instead */
-export type GoldSpotIndexSummary = MetalSpotIndexSummary;
-
 /**
  * Fetches the current Metal Spot Index from Monex API
  * Uses symbol from SITE_CONFIG.spotSymbol
@@ -331,6 +328,3 @@ export async function fetchMetalSpotIndex(): Promise<MetalSpotIndexSummary | nul
     return null;
   }
 }
-
-/** @deprecated Use fetchMetalSpotIndex instead */
-export const fetchGoldSpotIndex = fetchMetalSpotIndex;
